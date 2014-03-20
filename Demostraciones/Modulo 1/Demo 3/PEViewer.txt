@@ -1,0 +1,19 @@
+PEViewer Version 1.0 by WangQi(Koms Bomb)
+PEViewer.TXT contains details on using PEViewer
+
+1, What's PEViewer?
+PEViewer is a GUI tool that can let you dump a PE file structure to several
+pages. Its function is like the Borland TDump(a powerful command line tool).
+It's written in BCB 5.
+
+2, Disadvantage:
+The usage and advantage are in the CHM help file PEViewer.chm. I only show you
+the disadvantage of this tool.
+1), I've stopped developing this tool.
+2), The executable is very big, more than 500KB.
+3), It's very slow to display the text in the RichEdit.
+4), The resource section it shows is incorrect and it will take long time to show
+    the resource. So strongly recommend to turn of the resource panel.
+5), There maybe some potential bugs. It's not well tested.
+
+For more information on assembly or this software, please visit komsbomb.yeah.net

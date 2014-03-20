@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{a328bfb5-6d1e-4510-b84f-10a5aa056df6}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Program.py</StartupFile>
+    <SearchPath>C:\Users\Victor\Documents\Mi Trabajo\PARTICULAR\.NET Base\Ejemplos\Integracion\Auto\bin\Debug</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <AssemblyName>MisVehiculos</AssemblyName>
+    <Name>MisVehiculos</Name>
+    <RootNamespace>MisVehiculos</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <SearchPath Include="C:\Users\Victor\Documents\Mi Trabajo\PARTICULAR\.NET Base\Ejemplos\Integracion\Auto\bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Auto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>Auto</Name>
+      <AssemblyName>Auto.dll</AssemblyName>
+      <HintPath>C:\Users\Victor\Desktop\Ejemplos\Modulo 1\Demo 5\DLL\Auto.dll</HintPath>
+    </Reference>
+    <Reference Include="Auto, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>Auto</Name>
+      <AssemblyName>Auto.dll</AssemblyName>
+      <HintPath>C:\Users\Victor\Documents\GitHub\PlataformaNET\Ejercicios Plataforma .NET\Modulo 1\Demo 5\DLL\Auto.dll</HintPath>
+    </Reference>
+    <Reference Include="Avion, Version=1.0.4540.19442, Culture=neutral, PublicKeyToken=null">
+      <Name>Avion</Name>
+      <AssemblyName>Avion.dll</AssemblyName>
+      <HintPath>C:\Users\Victor\Desktop\Ejemplos\Modulo 1\Demo 5\DLL\Avion.dll</HintPath>
+    </Reference>
+    <Reference Include="Avion, Version=1.0.4547.21401, Culture=neutral, PublicKeyToken=null">
+      <Name>Avion</Name>
+      <AssemblyName>Avion.dll</AssemblyName>
+      <HintPath>C:\Users\Victor\Documents\GitHub\PlataformaNET\Ejercicios Plataforma .NET\Modulo 1\Demo 5\DLL\Avion.dll</HintPath>
+    </Reference>
+    <Reference Include="Vehiculo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>Vehiculo</Name>
+      <AssemblyName>Vehiculo.dll</AssemblyName>
+      <HintPath>C:\Users\Victor\Desktop\Ejemplos\Modulo 1\Demo 5\DLL\Vehiculo.dll</HintPath>
+    </Reference>
+    <Reference Include="Vehiculo, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>Vehiculo</Name>
+      <AssemblyName>Vehiculo.dll</AssemblyName>
+      <HintPath>C:\Users\Victor\Documents\GitHub\PlataformaNET\Ejercicios Plataforma .NET\Modulo 1\Demo 5\DLL\Vehiculo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
