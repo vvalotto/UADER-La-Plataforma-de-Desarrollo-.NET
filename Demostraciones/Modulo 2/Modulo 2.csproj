@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76DB60CC-AFDC-4E47-A915-E4285AF3582C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modulo_2</RootNamespace>
+    <AssemblyName>Modulo 2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01 - Tipos Primitivos\Program01.cs" />
+    <Compile Include="02 - Tipo Valor Referencia\Program02.cs" />
+    <Compile Include="03 - Lista Valor Referencia\Program03.cs" />
+    <Compile Include="04 - DecConstantesVariables\Program04.cs" />
+    <Compile Include="05 - Enumerados\05a - Enumerados\Programa05a.cs" />
+    <Compile Include="05 - Enumerados\05b - Enumerados\Programa05b.cs" />
+    <Compile Include="06 - Matrices\Programa06.cs" />
+    <Compile Include="07 - Estructuras\07a - Estructuras\Programa07a.cs" />
+    <Compile Include="07 - Estructuras\07b - Estructuras\Program07b.cs" />
+    <Compile Include="08 - Clases\08a - Clases\Programa08a.cs" />
+    <Compile Include="08 - Clases\08b - Clases\Programa08b.cs" />
+    <Compile Include="09 - Clase Object\Programa09.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="10 - Ambito\10a - Ambito\Programa10a.cs" />
+    <Compile Include="10 - Ambito\10b - Ambito\Programa10b.cs" />
+    <Compile Include="11 - Clase Abstracta\Figura.cs" />
+    <Compile Include="11 - Clase Abstracta\Programa11.cs" />
+    <Compile Include="12 - Interfaces\12a - Interfaces\Programa12a.cs" />
+    <Compile Include="12 - Interfaces\12b - Intefaces\Program12b.cs" />
+    <Compile Include="13 - Excepciones\13a - Excepciones\Programa13a.cs" />
+    <Compile Include="13 - Excepciones\13b - Excepciones\Programa13b.cs" />
+    <Compile Include="13 - Excepciones\13c - Excepciones\Programa13c.cs" />
+    <Compile Include="14 - Eventos y Delegados\14a - Eventos y Delegados\Programa14a.cs" />
+    <Compile Include="14 - Eventos y Delegados\14b - Eventos y Delegados\Programa14b.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
