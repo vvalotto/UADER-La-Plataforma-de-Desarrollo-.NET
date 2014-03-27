@@ -21,42 +21,4 @@ namespace Modulo_2
             Console.ReadKey();
         }
     }
-
-    internal enum Genero{
-        Masculino,
-        Femenino
-    };
-
-    internal struct Persona
-    {
-        internal string nombre;
-        internal string apellido;
-        internal int edad;
-        internal Genero genero;
-
-        //internal Persona(string _nombre, string _apellido, int _edad)
-        //{
-        //    nombre = _nombre;
-        //    apellido = _apellido;
-        //    edad = _edad;
-        //}
-
-        internal Persona(string _nombre, string _apellido, int _edad, Genero _genero)
-        {
-            nombre = _nombre;
-            apellido = _apellido;
-            edad = _edad;
-            genero = _genero;
-        }
-
-        public override string ToString()
-        {
-            return nombre + " " + apellido + ", edad: " + edad;
-        }
-
-        //internal override string ToString()
-        //{
-        //    return nombre + " " + apellido + ", edad: " + edad;
-        //}
-    }
 }

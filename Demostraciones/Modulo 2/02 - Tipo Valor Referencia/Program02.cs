@@ -18,17 +18,7 @@ namespace Modulo_2
 
             Console.ReadKey();
 
-
         }
     }
 
-    class MiClase
-    {
-        public string cadena;
-
-        public override string ToString()
-        {
-            return cadena;
-        }
-    }
 }

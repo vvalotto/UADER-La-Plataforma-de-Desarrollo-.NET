@@ -21,62 +21,6 @@ namespace Modulo_2
         
     }
 
-    class MiPrimeraClase
-    {
-        //Miembro de la clase
-        //1. Campos o artibutos
-        public string nombre = "Victor";
-
-        //2. Propiedad
-        private int _edad = 0;
-
-        public int edad
-        {
-            get
-            {
-                return _edad;
-;
-            }
-            set
-            {
-                _edad = value;
-            }
-        }
-
-        //3. Metodos
-        public void MiInfo()
-        {
-            Console.WriteLine(nombre + " tiene " + edad + " años.");
-        }
-
-        public string MiInfo(string nombre, int edad)
-        {
-            return nombre + " tiene " + edad + " años.";
-        }
-
-        //4. Propiedad Indexador 
-        private string[] _nombreDocentes = new string[] { "Diego", "Marcos", "Victor" };
-        public string this[int index]
-        {
-            get 
-            {
-                return _nombreDocentes[index];
-            }
-            set
-            {
-                _nombreDocentes[index] = value;
-            }
-        }
-
-        public void listarDocentes()
-        {
-            foreach (string i in _nombreDocentes)
-            {
-                Console.WriteLine(i);
-            }
-         }
-
-    }
 
     public sealed class AlgunTipo //1
     { 

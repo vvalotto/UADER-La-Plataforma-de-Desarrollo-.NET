@@ -66,6 +66,7 @@
     <Compile Include="13 - Excepciones\13c - Excepciones\Programa13c.cs" />
     <Compile Include="14 - Eventos y Delegados\14a - Eventos y Delegados\Programa14a.cs" />
     <Compile Include="14 - Eventos y Delegados\14b - Eventos y Delegados\Programa14b.cs" />
+    <Compile Include="MenuModulo2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
