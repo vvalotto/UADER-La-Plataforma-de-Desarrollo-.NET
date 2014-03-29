@@ -103,14 +103,23 @@ namespace Modulo_2
         {
             internal override void Ejecutar()
             {
-            Modulo2.MostrarTituloDemo("\nInicio Interfaces A\n");
+                //3. Uso de la Interfaz
+                Gente objPersona = new Gente();
+                objPersona.Nombre = "Alejo";
+                objPersona.Mostrar();
 
-            #region Incio del Codigo Demo
+                //4. Variables Interfaz
+                IMiInterface i = objPersona;
+                i.Mostrar();
 
-            #endregion
-
-            Console.ReadKey();
-            }
+                //6. Variables Objeto
+                CaractPersonas a = objPersona;
+                a.Apellidos = "Otros Apellidos";
+                objPersona.Mostrar();
+        
+                Console.ReadLine();
+            
+        }
     }
 
     //5. 

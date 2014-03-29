@@ -30,13 +30,8 @@ namespace Modulo_2
                 
         internal override void Ejecutar()
         {
-            Modulo2.MostrarTituloDemo("\nInicio Delegados\n");
-
-            #region Incio del Codigo Demo
-
-            #endregion
-
-            Console.ReadKey();
+			/*Program p = new Program();*/
+            Console.ReadLine();
         }
     }
 }

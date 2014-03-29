@@ -9,16 +9,49 @@ namespace Modulo_2
     {
         internal override void Ejecutar()
         {
-            //Definiciones de Tipo de datos primitivos
-            Modulo2.MostrarTituloDemo("\nInicio Tipo Valor Referencia\n");
+            //1. Declaración por valor
+            int numeroEntero;
+            numeroEntero = 10; //Se asigna el valor 10 a la variable entera 
+            
+            int numeroEnteroB;
+            
+            numeroEnteroB = numeroEntero; //Se asigna el valor contenido en una variabla a otra
+            Console.WriteLine("num 1 {0} - num 2 {1}", numeroEntero, numeroEnteroB);
 
-            #region Incio del Codigo Demo
+            //2. Declaracion por referencia
+            object tipoRef;
+            
+            tipoRef = numeroEntero; //Se asigna la dirección de memoria de la variable numeroEntero
+            object tipoRefB;
+            tipoRefB = tipoRef;
 
-            #endregion
+            Console.WriteLine("objeto {0}", tipoRef);
+            Console.WriteLine(tipoRef.GetType());
+            Console.WriteLine("objeto B {0}", tipoRefB);
+            Console.WriteLine(tipoRefB.GetType());
 
-            Console.ReadKey();
+            tipoRef = "Hola";
+            Console.WriteLine("objeto {0}", tipoRef);
+            Console.WriteLine(tipoRef.GetType());
+
+            MiClase c = new MiClase();
+            c.cadena = "aaaa";
+            tipoRefB = c;
+            Console.WriteLine("objeto {0}", tipoRefB.ToString());
+            Console.WriteLine(tipoRefB.GetType());
+
+            Console.ReadLine();
 
         }
     }
 
+    class MiClase
+    {
+        public string cadena;
+
+        public override string ToString()
+        {
+            return cadena;
+        }
+    }
 }

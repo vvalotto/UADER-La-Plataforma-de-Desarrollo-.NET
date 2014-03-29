@@ -10,14 +10,33 @@ namespace Modulo_2
         internal override void Ejecutar()
         {
 
-            Modulo2.MostrarTituloDemo("\nInicio Declaracion Constantes Variables\n");
+            //Declaracion de Variables
+            //int a;
+            //a = 10;
+            int a = 10;
 
-            #region Incio del Codigo Demo
+            //int numeroEnteroA, numeroEnteroB;
+            int numeroEnteroA = 10, numeroEnteroB = 5;
+ 
+            //Declaracion de Constantes
+            const int numeroConstante = 10;
+ 
+            //Tipos anónimos
+            var persona = new { Nombre = "Victor", Edad = 49 };
+            Console.WriteLine ("Nombre:  "  + persona.Nombre + " - " + " Edad: " + Convert.ToString(persona.Edad));
+            Console.ReadLine();
 
-            #endregion
-
-            Console.ReadKey();
-
+            //Tipo Nullable
+            int? number = null;
+            if (number.HasValue == true)
+            {
+                Console.WriteLine(number.ToString());
+            }
+            else
+            {
+                Console.WriteLine("El valor es nulo");
+            }
+            Console.ReadLine();
 
         }
     }

@@ -9,15 +9,9 @@ namespace Modulo_2
     {
         internal override void Ejecutar()
         {
-            Modulo2.MostrarTituloDemo("\nInicio Ambito B\n");
-
-            #region Incio del Codigo Demo
-
-            #endregion
-
-            Console.ReadKey();
+            Humano p = new Humano();
+            
         }
-
     }
 
     public class Humano

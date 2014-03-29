@@ -28,13 +28,41 @@ namespace Modulo_2
     {
         internal override void Ejecutar()
         {
-            Modulo2.MostrarTituloDemo("\nInicio Estructuras A\n");
 
-            #region Incio del Codigo Demo
+            //Instanciacion
+            Punto p ;
+          
+            p.x = 10;
+            p.y = 10;
 
-            #endregion
+            Punto p1 = new Punto(0,0);
+            Console.WriteLine("Antes");
+            Console.WriteLine(p.ToString());
+            Console.WriteLine(p1.ToString());
+            p1 = p;
+            Console.WriteLine("Despues");
+            Console.WriteLine(p.ToString());
+            Console.WriteLine(p1.ToString());
+            Console.ReadLine();
 
-            Console.ReadKey();
+            //Ejecicio de ReferenceEquals - Estructuras
+            if (ReferenceEquals(p, p1))
+                Console.WriteLine("Tienen la misma dirección de memoria");
+            else
+                Console.WriteLine("No tiene las misma dirección de memoria");
+            Console.ReadLine();
+                      
+
+            //Ejecicio de ReferenceEquals - Clase 
+            ClaseEjemplo ClaseA = new ClaseEjemplo();
+            ClaseEjemplo ClaseB = new ClaseEjemplo();
+            ClaseA = ClaseB;
+            if (ReferenceEquals(ClaseA, ClaseB))
+                Console.WriteLine("Tienen la misma dirección de memoria");
+            else
+                Console.WriteLine("No tiene las misma dirección de memoria");
+            Console.ReadLine();
+
         }
 
         class ClaseEjemplo

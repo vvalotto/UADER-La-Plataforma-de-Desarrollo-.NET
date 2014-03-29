@@ -23,15 +23,10 @@ namespace Modulo_2
             Console.WriteLine("Los datos fueron cambiados");
         }
 
-         internal override void Ejecutar()
+		internal override void Ejecutar()
         {
-            Modulo2.MostrarTituloDemo("\nInicio Eventos\n");
-
-            #region Incio del Codigo Demo
-
-            #endregion
-
-            Console.ReadKey();
+			/*Program p = new Program();
+            Console.ReadLine();*/
         }
 
     }

@@ -29,13 +29,24 @@ namespace Modulo_2
         internal override void Ejecutar()
 
         {
-            Modulo2.MostrarTituloDemo("\nInicio Interfaces B\n");
+            // Una colección de datos del tipo Empleado
+            List<Empleado> empleados = new List<Empleado>();
 
-            #region Incio del Codigo Demo
+            // Añadimos varios empleados a la colección
+            empleados.Add(new Empleado("Pepe"));
+            empleados.Add(new Empleado("Bernardo"));
+            empleados.Add(new Empleado("Juan"));
+            empleados.Add(new Empleado("Ana"));
 
-            #endregion
+            // La clasificamos
+            empleados.Sort();
+            
+            // Mostramos los nombres clasificados
+            foreach (Empleado e1 in empleados)
+                Console.WriteLine(e1.Nombre);
 
-            Console.ReadKey();
+            Console.ReadLine();
+
         }
     }
 }

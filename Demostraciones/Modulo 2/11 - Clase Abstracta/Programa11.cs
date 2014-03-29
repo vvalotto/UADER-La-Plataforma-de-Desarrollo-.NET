@@ -7,13 +7,13 @@ namespace Modulo_2
 		internal override void Ejecutar()
 
 		{
-            Modulo2.MostrarTituloDemo("\nInicio Clase Abstracta A\n");
+			Triangulo miTriangulo = new Triangulo ();
 
-            #region Incio del Codigo Demo
+            miTriangulo.altura = 10;
+            miTriangulo.baseT = 5;
+			miTriangulo.InformarDatosGeometricos ();
 
-            #endregion
-
-            Console.ReadKey();
+			Console.ReadLine ();
 
 		}
 	}

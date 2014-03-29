@@ -11,14 +11,27 @@ namespace Modulo_2
 
         internal override void Ejecutar()
         {
-            Modulo2.MostrarTituloDemo("\nInicio Enumeracion B\n");
+            //3. Asignaciones de valores no contemplados en la lista de enumerados
+            Colores MiColorA = Colores.Verde;
+            Colores MiColorB = Colores.Azul;
+            Colores MiColorC = (Colores)5;
+            Console.WriteLine(MiColorC);
 
-            #region Incio del Codigo Demo
+            //4. Evaluación de contenido de la variable enumerada
+            Programa p = new Programa();
+            p.Trabajar(MiColorC);
+            Console.ReadLine();
+        }
 
-            #endregion
-
-            Console.ReadKey();
-
+        class Programa
+        {
+            public void Trabajar(Colores color)
+            {
+                if (Enum.IsDefined(typeof(Colores), color)) //
+                    Console.WriteLine(color);
+                else
+                    Console.WriteLine("Tipo no definido, ERROR!");
+            }
         }
 
     }

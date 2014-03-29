@@ -10,15 +10,30 @@ namespace Modulo_2
     {
         internal override void Ejecutar()
         {
+            
+            //Declaración e instanciacion de diferentes tipos de datos
+            SByte a = 0;
+            Byte b = 0;
+            Int16 c = 0;
+            Int32 d = 0;
+            Int64 e = 0;
+            string s = "";
+            Exception ex = new Exception();
 
-            Modulo2.MostrarTituloDemo("\nInicio Lista Valor Referencia\n");
+            //Se compone un arreglo de objetos con las instanciaciones
+            Object[] types = { a, b, c, d, e, s, ex };
 
-            #region Incio del Codigo Demo
-
-            #endregion
-
-            Console.ReadKey();
-
+            //Obtener el tipo de datos definido para cada instancia
+            foreach (object o in types)
+            {
+                string type;
+                if (o.GetType().IsValueType)
+                    type = "Tipo Valor";
+                else
+                    type = "Tipo Referencia";
+                Console.WriteLine("{0}: {1}", o.GetType(), type);
+            }
+            Console.ReadLine();
         }
     }
 }
