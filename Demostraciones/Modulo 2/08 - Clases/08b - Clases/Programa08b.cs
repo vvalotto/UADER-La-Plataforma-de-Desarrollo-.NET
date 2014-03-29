@@ -32,6 +32,7 @@ namespace Modulo_2
             }
         }
 
+        //Miembros Metodos con sobrecarga
         public void Saludar()
         {
             Console.WriteLine("Bienvenidos a Paraná");
@@ -52,11 +53,12 @@ namespace Modulo_2
             return "Este año " + valor.ToString() + " será el mejor.";
         }
 
+
         internal override void Ejecutar()
         {
             Programa08b p = new Programa08b("Alejo");
             Console.WriteLine(p.nombre);
-            Console.ReadLine();
+            Console.ReadKey();
 
             //Ejemplo de Sobrecarga
             p.nombre = "pepe";
@@ -64,7 +66,7 @@ namespace Modulo_2
             p.Saludar("Ciudad Paisaje");
             p.Saludar("Pase la mejor temporada", 2014);
             Console.WriteLine(p.Saludar(2014));
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

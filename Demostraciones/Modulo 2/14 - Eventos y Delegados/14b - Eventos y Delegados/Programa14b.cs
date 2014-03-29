@@ -9,13 +9,17 @@ namespace Modulo_2
     {
         delegate void Saludar(string Nombre);
         
-        public Programa14b()
+        internal override void Ejecutar()
         {
             Saludar Saludo = new Saludar(MostrarSaludo);
+
             Saludo += new Saludar(SaludoDespedir);
             Saludo("Alejo");
+            Console.ReadKey();
+
             Saludo -= new Saludar(SaludoDespedir);
-            Saludo("Alejo");     
+            Saludo("Alejo");   
+            Console.ReadKey();
         }
 
         private void MostrarSaludo (string Nombre)
@@ -27,11 +31,6 @@ namespace Modulo_2
         {
             Console.WriteLine("Adios {0}", Nombre);
         }
-                
-        internal override void Ejecutar()
-        {
-			/*Program p = new Program();*/
-            Console.ReadLine();
-        }
+               
     }
 }

@@ -40,7 +40,7 @@ namespace Modulo_2
             Console.WriteLine("objeto {0}", tipoRefB.ToString());
             Console.WriteLine(tipoRefB.GetType());
 
-            Console.ReadLine();
+            Console.ReadKey();
 
         }
     }

@@ -34,7 +34,7 @@ namespace Modulo_2
             System.Int32 i32 = new int();
             System.Int64 i64 = new long();
             /*Console.WriteLine("i16:{0}, i32:{1}, i64:{2}", i16, i32, i64);
-            Console.ReadLine();
+            Console.Readkey();
             Environment.Exit(0);*/
 
             //5.Conversion implicita
@@ -43,7 +43,7 @@ namespace Modulo_2
             i64 = i32;
 
             /*Console.WriteLine("i16:{0}, i32:{1}, i64:{2}", i16, i32, i64);
-            Console.ReadLine();
+            Console.ReadKey();
             Environment.Exit(0);*/
 
             //6. Conversion explicita
@@ -51,7 +51,7 @@ namespace Modulo_2
             i32 = (int)i64;
             i16 = (short)i64;
             /*Console.WriteLine("i16:{0}, i32:{1}, i64:{2}", i16, i32, i64);
-            Console.ReadLine();
+            Console.ReadKey();
             Environment.Exit(0);*/
 
             System.Single f = new float();
@@ -69,7 +69,7 @@ namespace Modulo_2
             sbyte nByteConSigno; //tamaño = 8
             nByte = 200;
             /*Console.WriteLine("nByte: " + nByte.ToString());
-            Console.ReadLine();
+            Console.ReadKey();
             Environment.Exit(0);*/
 
             //5. Caracteres
@@ -82,7 +82,7 @@ namespace Modulo_2
             cadenaTexto += cadenaTexto;
 
             /*Console.WriteLine("cadenaTexto: " + cadenaTexto);
-            Console.ReadLine();
+            Console.ReadKey();
             Environment.Exit(0);*/
 
             //6. Booleano
@@ -90,7 +90,7 @@ namespace Modulo_2
             tipoBooleano = false;
 
             /*Console.WriteLine("tipoBooleano: " + tipoBooleano.ToString());
-            Console.ReadLine();
+            Console.ReadKey();
             Environment.Exit(0);*/
   
 
@@ -109,10 +109,10 @@ namespace Modulo_2
             nByte = Convert.ToByte(caracter);
             tipoBooleano = Convert.ToBoolean(i64);
             
-            /*Console.WriteLine("Es numero: " + i64);
+            Console.WriteLine("Es numero: " + i64);
             Console.WriteLine("Es texto: " + cadenaTexto);
             Console.WriteLine(cadenaTexto.GetHashCode());
-            Console.WriteLine("Es booleano: " + tipoBooleano);*/
+            Console.WriteLine("Es booleano: " + tipoBooleano);
             
             //9. Tipo Base ValueType
             char c = new char();
@@ -124,7 +124,7 @@ namespace Modulo_2
             Console.WriteLine(vt);
             Console.WriteLine(vt.GetType());
        
-            Console.ReadLine();
+            Console.ReadKey();
 
         }
 

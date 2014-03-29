@@ -12,26 +12,26 @@ namespace Modulo_2
         {
             MiPrimeraClase objMiPrimeraClase = new MiPrimeraClase();
             Console.WriteLine(objMiPrimeraClase.nombre);
-            Console.ReadLine();
+            Console.ReadKey();
                         
             objMiPrimeraClase.edad = 51;
             Console.WriteLine("Nombre: " + objMiPrimeraClase.nombre);
             Console.WriteLine("Edad: " + objMiPrimeraClase.edad);
-            Console.ReadLine();
+            Console.ReadKey();
 
             Console.WriteLine("Llama MiInfo");
             objMiPrimeraClase.MiInfo();
-            Console.ReadLine();
+            Console.ReadKey();
 
             Console.WriteLine("Llama MyInfo(nombre,edad)");
             Console.WriteLine(objMiPrimeraClase.MiInfo("Franco",12));
-            Console.ReadLine();
+            Console.ReadKey();
 
             objMiPrimeraClase.listarDocentes();
 
             objMiPrimeraClase[1] = "Pepe";
             objMiPrimeraClase.listarDocentes();
-            Console.ReadLine();
+            Console.ReadKey();
             
         }
     }
@@ -103,10 +103,10 @@ namespace Modulo_2
         private readonly String m_SoloLectura = "2"; // 4
         private static Int32 s_CampoEstatico = 3; // 5
 
-        // Type constructor
+        // Constructor de tipo
         static AlgunTipo() { } // 6
 
-        // Instance constructors
+        // Constructor de Instancia
         public AlgunTipo(Int32 x) { } // 7
         public AlgunTipo() { } // 8
 

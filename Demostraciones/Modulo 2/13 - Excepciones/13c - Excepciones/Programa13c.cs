@@ -31,12 +31,12 @@ namespace Modulo_2
 
             catch  (DivideByZeroException ex)
             {
-		            Console.WriteLine (ex.StackTrace.ToString());
+		            Console.WriteLine (ex.StackTrace);
             }
 
             catch (Exception ex)
             {
-	            Console.WriteLine(ex.Message.ToString());
+	            Console.WriteLine(ex.Message);
             }
 
             finally
@@ -47,5 +47,5 @@ namespace Modulo_2
             Console.ReadLine();
 
         }
-      }
+     }
  }

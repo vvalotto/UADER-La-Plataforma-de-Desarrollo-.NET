@@ -20,7 +20,7 @@ namespace Modulo_2
             //4. Evaluación de contenido de la variable enumerada
             Programa p = new Programa();
             p.Trabajar(MiColorC);
-            Console.ReadLine();
+            Console.ReadKey();
         }
 
         class Programa

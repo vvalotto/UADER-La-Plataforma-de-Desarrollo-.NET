@@ -13,7 +13,7 @@ namespace Modulo_2
             miTriangulo.baseT = 5;
 			miTriangulo.InformarDatosGeometricos ();
 
-			Console.ReadLine ();
+			Console.ReadKey ();
 
 		}
 	}

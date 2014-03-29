@@ -9,10 +9,12 @@ namespace Modulo_2
     {
         internal override void Ejecutar()
         {
+            //1. Declaracion de lo miembros
             int i;
             int j ;
-            int res;
+            int res = 0;
 
+            //2.tratamiento de error
             try 
             {
                 Console.Write("Un numero:");
@@ -23,21 +25,26 @@ namespace Modulo_2
                 Console.WriteLine(res.ToString());
             }
 
-            catch  (FormatException)
+            //5. Atrapa excepciones particulares
+            catch (FormatException)
             {
-		            Console.WriteLine ("El ingreso de datos no está en el formato correcto");
+                Console.WriteLine("El ingreso de datos no está en el formato correcto");
             }
 
-            catch  (DivideByZeroException)
+            catch (DivideByZeroException)
             {
-		            Console.WriteLine ("Division por 0. Error");
+                Console.WriteLine("Division por 0. Error");
             }
 
+            //4. Atrapa al excepcion
             catch (Exception ex)
             {
-	            Console.WriteLine(ex.Message.ToString());
+	            Console.WriteLine(ex.Message);
             }
-            Console.ReadLine();
+
+            Console.WriteLine("Resultado: {0}", res);
+            Console.ReadKey();
+
 
         }
     }

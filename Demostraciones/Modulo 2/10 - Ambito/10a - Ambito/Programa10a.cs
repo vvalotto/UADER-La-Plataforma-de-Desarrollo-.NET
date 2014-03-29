@@ -39,21 +39,21 @@ namespace Modulo_2
             //Uso de una clase dentro del espacio de nombres
             //ClaseA objClaseA = new ClaseA();
             //Console.WriteLine(objClaseA.a);
-            Console.ReadLine();
+            Console.ReadKey();
             
         }
 
         //2. Ambito del Método
-        //public void AmbitoMetodo()
-        //{
-        //    int j = 0;  //declaración en el método
-        //    for (int l = 0; l <= 10; l++)
-        //    {
-        //        j++; // Dentro del Ambito del método
-        //    }
+        public void AmbitoMetodo()
+        {
+            int j = 0;  //declaración en el método
+            for (int l = 0; l <= 10; l++)
+            {
+                j++; // Dentro del Ambito del método
+            }
 
-        //    j = +j; // Dentro del Ambito del método
-        // }
+            j = +j; // Dentro del Ambito del método
+        }
 
         //public void AmbitoMetodoB()
         //{
@@ -67,8 +67,9 @@ namespace Modulo_2
         //    for (int l = 0; l <= 10; l++)
         //    {
         //        int j = 1; //declaración en el bloque
-        //        j++; 
+        //        j++;
         //    }
+        //}
 
         public void AmbitoMetodoD()
         {

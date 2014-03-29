@@ -41,15 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="01 - Tipos Primitivos\Program01.cs" />
-    <Compile Include="02 - Tipo Valor Referencia\Program02.cs" />
-    <Compile Include="03 - Lista Valor Referencia\Program03.cs" />
-    <Compile Include="04 - DecConstantesVariables\Program04.cs" />
+    <Compile Include="01 - Tipos Primitivos\Programa01.cs" />
+    <Compile Include="02 - Tipo Valor Referencia\Programa02.cs" />
+    <Compile Include="03 - Lista Valor Referencia\Programa03.cs" />
+    <Compile Include="04 - DecConstantesVariables\Programa04.cs" />
     <Compile Include="05 - Enumerados\05a - Enumerados\Programa05a.cs" />
     <Compile Include="05 - Enumerados\05b - Enumerados\Programa05b.cs" />
     <Compile Include="06 - Matrices\Programa06.cs" />
     <Compile Include="07 - Estructuras\07a - Estructuras\Programa07a.cs" />
-    <Compile Include="07 - Estructuras\07b - Estructuras\Program07b.cs" />
+    <Compile Include="07 - Estructuras\07b - Estructuras\Programa07b.cs" />
     <Compile Include="08 - Clases\08a - Clases\Programa08a.cs" />
     <Compile Include="08 - Clases\08b - Clases\Programa08b.cs" />
     <Compile Include="09 - Clase Object\Programa09.cs">
@@ -64,8 +64,10 @@
     <Compile Include="13 - Excepciones\13a - Excepciones\Programa13a.cs" />
     <Compile Include="13 - Excepciones\13b - Excepciones\Programa13b.cs" />
     <Compile Include="13 - Excepciones\13c - Excepciones\Programa13c.cs" />
+    <Compile Include="14 - Eventos y Delegados\14a - Eventos y Delegados\Empleado.cs" />
     <Compile Include="14 - Eventos y Delegados\14a - Eventos y Delegados\Programa14a.cs" />
     <Compile Include="14 - Eventos y Delegados\14b - Eventos y Delegados\Programa14b.cs" />
+    <Compile Include="15 - Genericos\Programa15.cs" />
     <Compile Include="MenuModulo2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

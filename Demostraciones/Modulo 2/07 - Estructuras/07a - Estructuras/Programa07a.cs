@@ -35,10 +35,13 @@ namespace Modulo_2
             p.x = 10;
             p.y = 10;
 
+            //Nueva Instancia
             Punto p1 = new Punto(0,0);
             Console.WriteLine("Antes");
             Console.WriteLine(p.ToString());
             Console.WriteLine(p1.ToString());
+
+            //Asignacion de instancias
             p1 = p;
             Console.WriteLine("Despues");
             Console.WriteLine(p.ToString());

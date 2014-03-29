@@ -33,7 +33,7 @@ namespace Modulo_2
                     type = "Tipo Referencia";
                 Console.WriteLine("{0}: {1}", o.GetType(), type);
             }
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

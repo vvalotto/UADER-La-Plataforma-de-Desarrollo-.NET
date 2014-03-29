@@ -24,10 +24,12 @@ namespace Modulo_2
             //Tipos anónimos
             var persona = new { Nombre = "Victor", Edad = 49 };
             Console.WriteLine ("Nombre:  "  + persona.Nombre + " - " + " Edad: " + Convert.ToString(persona.Edad));
-            Console.ReadLine();
+            Console.ReadKey();
 
             //Tipo Nullable
             int? number = null;
+            Nullable<int> number2 = null;
+
             if (number.HasValue == true)
             {
                 Console.WriteLine(number.ToString());
@@ -36,7 +38,7 @@ namespace Modulo_2
             {
                 Console.WriteLine("El valor es nulo");
             }
-            Console.ReadLine();
+            Console.ReadKey();
 
         }
     }

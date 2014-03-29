@@ -42,7 +42,7 @@ namespace Modulo_2
             Console.WriteLine("Operacion OR: {0} - {1}", MiColorBitWise, (sbyte)MiColorBitWise);
             Colores MiColorBitWiseB = MiColorA & MiColorB;
             Console.WriteLine("Operacion AND: {0} - {1}", MiColorBitWiseB, (sbyte)MiColorBitWiseB);
-            Console.ReadLine();
+            Console.ReadKey();
 
 
 

@@ -32,6 +32,7 @@ namespace Modulo_2
                 Console.WriteLine("12 - Interfaces");
                 Console.WriteLine("13 - Excepciones");
                 Console.WriteLine("14 - Eventos y Delegados");
+                Console.WriteLine("15 - Genericos");
                 Modulo2.MostrarSeparador();
                 Console.WriteLine("0 - Salir");
                 Modulo2.MostrarSeparador();
@@ -120,6 +121,10 @@ namespace Modulo_2
                         Modulo2.EjecutarPrograma(new Programa14a());
                         Modulo2.MostrarTituloDemo("Demo de Delegados");
                         Modulo2.EjecutarPrograma(new Programa14b());
+                        break;
+                    case 15:
+                        Modulo2.MostrarTituloDemo("Demo de Genericos");
+                        Modulo2.EjecutarPrograma(new Programa15());;
                         break;
                 }
 

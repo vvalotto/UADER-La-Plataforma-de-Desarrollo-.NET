@@ -58,7 +58,7 @@ namespace Modulo_2
 
 
 
-    //1 . Declaracion de Interface y explicacion
+    //1 . Declaracion de Interface
     interface IMiInterface
     {
         void Mostrar();
@@ -70,31 +70,32 @@ namespace Modulo_2
     //2. Implementar una interfaz en una clase
     public class Gente : CaractPersonas, IMiInterface
     {
-        //public string Apellidos = "Mis Apellidos";
+        public string Apellidos = "Mis Apellidos";
 
         public void Mostrar()
         {
             Console.WriteLine(Nombre + " " + Apellidos);
+            //Console.WriteLine(Nombre);
         
         }
 
-        private string nombreValor;
+        private string _nombreValor;
         public string Nombre
         {
             get
             {
-                return nombreValor;
+                return _nombreValor;
             }
             set
             {
-                nombreValor = value;
+                _nombreValor = value;
             }
         }
 
-        private int edadValor;
+        private int _edadValor;
         public int Edad
         {
-            get { return edadValor; }
+            get { return _edadValor; }
         }
     }
 
@@ -117,7 +118,7 @@ namespace Modulo_2
                 a.Apellidos = "Otros Apellidos";
                 objPersona.Mostrar();
         
-                Console.ReadLine();
+                Console.ReadKey();
             
         }
     }
@@ -125,16 +126,16 @@ namespace Modulo_2
     //5. 
     public class CaractPersonas
     {
-        private string apellidosValor = "Apellidos";
+        private string _apellidos = "Apellidos";
         public string Apellidos
         {
             get
             {
-                return apellidosValor;
+                return _apellidos;
             }
             set
             {
-                apellidosValor = value;
+                _apellidos = value;
 
             }
         }
