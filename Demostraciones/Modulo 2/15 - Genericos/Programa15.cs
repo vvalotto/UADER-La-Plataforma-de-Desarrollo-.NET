@@ -10,21 +10,26 @@ namespace Modulo_2
     class Programa15:Programa
     {            
         
+        //Ejemplo básico de uso de genericoa
         public class ManejadorEntidad<T>
         {
+            #region Declaracion de los miembros de tipos
             private T _entidad;
             public T Entidad
             {
                  set {_entidad = value;}
                  get {return _entidad;}
             }
+            #endregion
 
+            #region Declaracion de los miembros metodos
             public void Guardar()
             {
-                StreamWriter _fEntidad = new StreamWriter(@"C:\Temp\" + Entidad.GetType() +".Txt");
+                TextWriter _fEntidad = File.AppendText(@"C:\Temp\Genericos.Txt");
                 try
                 {
                     _fEntidad.WriteLine(_entidad);
+
                 }
                 catch (IOException)
                 {
@@ -39,8 +44,9 @@ namespace Modulo_2
                     _fEntidad.Close();
                 }
             }
+            #endregion
 
-          
+
         }
         internal override void Ejecutar()
         {
