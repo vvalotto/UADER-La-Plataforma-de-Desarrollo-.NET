@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4237C043-A53E-4576-9D4F-8B3F2DA81FA9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Modulo_3</RootNamespace>
+    <AssemblyName>Modulo 3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01 - Colecciones\01a - Colecciones\Programa01a.cs" />
+    <Compile Include="01 - Colecciones\01b - Colecciones\Cliente.cs" />
+    <Compile Include="01 - Colecciones\01b - Colecciones\Programa01b.cs" />
+    <Compile Include="01 - Colecciones\01c - Colecciones\Programa01c.cs" />
+    <Compile Include="02 - Streams\02a - Streams\Programa02a.cs" />
+    <Compile Include="02 - Streams\02b - Streams\Programa2b.cs" />
+    <Compile Include="02 - Streams\02c - Streams\Documento.cs" />
+    <Compile Include="02 - Streams\02c - Streams\Programa02c.cs" />
+    <Compile Include="03 - Archivos\03a - Archivos\Program03a.cs" />
+    <Compile Include="03 - Archivos\03b - Archivos\Programa03b.cs" />
+    <Compile Include="04 - Acceso a Redes\04a - Acceso a Redes\Programa04a.cs" />
+    <Compile Include="04 - Acceso a Redes\04b - Acceso a Redes\Programa04b.cs" />
+    <Compile Include="04 - Acceso a Redes\04c - Acceso a Redes\Programa04c.cs" />
+    <Compile Include="Modulo3Menu.cs" />
+    <Compile Include="Inicio.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
