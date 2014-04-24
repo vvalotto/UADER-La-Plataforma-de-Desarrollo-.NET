@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Proyectos" Class="ProyectosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MACKINA\SQLEXPRESS;Initial Catalog=Proyectos;Integrated Security=True" SettingsObjectName="Linq.Properties.Settings" SettingsPropertyName="ProyectosConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Clientes" Member="Clientes">
+    <Type Name="Clientes">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Calle" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Numero" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Piso" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Departamento" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cuidad" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Provincia" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Pais" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Web" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDContacto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Clientes_Proyectos" Member="Proyectos" ThisKey="Id" OtherKey="IDCliente" Type="Proyectos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Proyectos" Member="Proyectos">
+    <Type Name="Proyectos">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IDCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Clientes_Proyectos" Member="Clientes" ThisKey="IDCliente" OtherKey="Id" Type="Clientes" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
