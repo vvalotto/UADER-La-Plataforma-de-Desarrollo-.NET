@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloCampeonato.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloCampeonatoStoreContainer">
+    <EntitySet Name="Equipos" EntityType="ModeloCampeonato.Store.Equipos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Partidos" EntityType="ModeloCampeonato.Store.Partidos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TablasPosiciones" EntityType="ModeloCampeonato.Store.TablasPosiciones" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="EquipoPartido" Association="ModeloCampeonato.Store.EquipoPartido">
+      <End Role="Equipo" EntitySet="Equipos" />
+      <End Role="Partido" EntitySet="Partidos" />
+    </AssociationSet>
+    <AssociationSet Name="EquipoPartido1" Association="ModeloCampeonato.Store.EquipoPartido1">
+      <End Role="Equipo" EntitySet="Equipos" />
+      <End Role="Partido" EntitySet="Partidos" />
+    </AssociationSet>
+    <AssociationSet Name="TablaPosicionesEquipo" Association="ModeloCampeonato.Store.TablaPosicionesEquipo">
+      <End Role="TablaPosiciones" EntitySet="TablasPosiciones" />
+      <End Role="Equipo" EntitySet="Equipos" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Equipos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Partidos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GolesLoca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdEquipoVisitante" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="GolesVistante" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EquipoLocalId" Type="int" Nullable="false" />
+    <Property Name="EquipoVisitanteId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TablasPosiciones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PG" Type="smallint" Nullable="false" />
+    <Property Name="PE" Type="smallint" Nullable="false" />
+    <Property Name="PP" Type="smallint" Nullable="false" />
+    <Property Name="Equipo_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="EquipoPartido">
+    <End Role="Equipo" Type="ModeloCampeonato.Store.Equipos" Multiplicity="1" />
+    <End Role="Partido" Type="ModeloCampeonato.Store.Partidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Partido">
+        <PropertyRef Name="EquipoLocalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EquipoPartido1">
+    <End Role="Equipo" Type="ModeloCampeonato.Store.Equipos" Multiplicity="1" />
+    <End Role="Partido" Type="ModeloCampeonato.Store.Partidos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Partido">
+        <PropertyRef Name="EquipoVisitanteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TablaPosicionesEquipo">
+    <End Role="TablaPosiciones" Type="ModeloCampeonato.Store.TablasPosiciones" Multiplicity="*" />
+    <End Role="Equipo" Type="ModeloCampeonato.Store.Equipos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Equipo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TablaPosiciones">
+        <PropertyRef Name="Equipo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloCampeonato" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModeloCampeonatoContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Equipos" EntityType="ModeloCampeonato.Equipo" />
+          <EntitySet Name="Partidos" EntityType="ModeloCampeonato.Partido" />
+          <AssociationSet Name="EquipoPartido" Association="ModeloCampeonato.EquipoPartido">
+            <End Role="Equipo" EntitySet="Equipos" />
+            <End Role="Partido" EntitySet="Partidos" />
+          </AssociationSet>
+          <AssociationSet Name="EquipoPartido1" Association="ModeloCampeonato.EquipoPartido1">
+            <End Role="Equipo" EntitySet="Equipos" />
+            <End Role="Partido" EntitySet="Partidos" />
+          </AssociationSet>
+          <EntitySet Name="TablasPosiciones" EntityType="ModeloCampeonato.TablaPosiciones" />
+          <AssociationSet Name="TablaPosicionesEquipo" Association="ModeloCampeonato.TablaPosicionesEquipo">
+            <End Role="TablaPosiciones" EntitySet="TablasPosiciones" />
+            <End Role="Equipo" EntitySet="Equipos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Equipo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <NavigationProperty Name="Partido" Relationship="ModeloCampeonato.EquipoPartido" FromRole="Equipo" ToRole="Partido" />
+          <NavigationProperty Name="Partido1" Relationship="ModeloCampeonato.EquipoPartido1" FromRole="Equipo" ToRole="Partido" />
+          <NavigationProperty Name="TablaPosiciones" Relationship="ModeloCampeonato.TablaPosicionesEquipo" FromRole="Equipo" ToRole="TablaPosiciones" />
+        </EntityType>
+        <EntityType Name="Partido">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GolesLocaL" Type="String" Nullable="false" />
+          <Property Name="IdEquipoVisitante" Type="String" Nullable="false" />
+          <Property Name="GolesVistante" Type="String" Nullable="false" />
+          <NavigationProperty Name="EquipoL" Relationship="ModeloCampeonato.EquipoPartido" FromRole="Partido" ToRole="Equipo" />
+          <Property Name="EquipoLocalId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="EquipoV" Relationship="ModeloCampeonato.EquipoPartido1" FromRole="Partido" ToRole="Equipo" />
+          <Property Name="EquipoVisitanteId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="EquipoPartido">
+          <End Type="ModeloCampeonato.Equipo" Role="Equipo" Multiplicity="1" />
+          <End Type="ModeloCampeonato.Partido" Role="Partido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Partido">
+              <PropertyRef Name="EquipoLocalId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EquipoPartido1">
+          <End Type="ModeloCampeonato.Equipo" Role="Equipo" Multiplicity="1" />
+          <End Type="ModeloCampeonato.Partido" Role="Partido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Equipo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Partido">
+              <PropertyRef Name="EquipoVisitanteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TablaPosiciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PG" Type="Int16" Nullable="false" />
+          <Property Name="PE" Type="Int16" Nullable="false" />
+          <Property Name="PP" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Equipo" Relationship="ModeloCampeonato.TablaPosicionesEquipo" FromRole="TablaPosiciones" ToRole="Equipo" />
+        </EntityType>
+        <Association Name="TablaPosicionesEquipo">
+          <End Type="ModeloCampeonato.TablaPosiciones" Role="TablaPosiciones" Multiplicity="1" />
+          <End Type="ModeloCampeonato.Equipo" Role="Equipo" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloCampeonatoStoreContainer" CdmEntityContainer="ModeloCampeonatoContainer">
+    <EntitySetMapping Name="Equipos">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloCampeonato.Equipo)">
+        <MappingFragment StoreEntitySet="Equipos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partidos">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloCampeonato.Partido)">
+        <MappingFragment StoreEntitySet="Partidos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GolesLocaL" ColumnName="GolesLoca" />
+          <ScalarProperty Name="IdEquipoVisitante" ColumnName="IdEquipoVisitante" />
+          <ScalarProperty Name="GolesVistante" ColumnName="GolesVistante" />
+          <ScalarProperty Name="EquipoLocalId" ColumnName="EquipoLocalId" />
+          <ScalarProperty Name="EquipoVisitanteId" ColumnName="EquipoVisitanteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TablasPosiciones">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloCampeonato.TablaPosiciones)">
+        <MappingFragment StoreEntitySet="TablasPosiciones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PG" ColumnName="PG" />
+          <ScalarProperty Name="PE" ColumnName="PE" />
+          <ScalarProperty Name="PP" ColumnName="PP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TablaPosicionesEquipo" TypeName="ModeloCampeonato.TablaPosicionesEquipo" StoreEntitySet="TablasPosiciones">
+      <EndProperty Name="Equipo">
+        <ScalarProperty Name="Id" ColumnName="Equipo_Id" />
+      </EndProperty>
+      <EndProperty Name="TablaPosiciones">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
