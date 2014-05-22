@@ -1,0 +1,21 @@
+﻿@if (OAuthWebSecurity.RegisteredClientData.Count == 0) {
+    <div class="message-info">
+        <p>
+            No hay ningún servicio de autenticación externa configurado. Consulte <a href="http://go.microsoft.com/fwlink/?LinkId=226949">este artículo</a>
+            para obtener detalles sobre la configuración de esta aplicación ASP.NET para que admita el inicio de sesión a través de servicios externos.
+        </p>
+    </div>
+} else {
+    <form method="post">
+    @AntiForgery.GetHtml()
+    <fieldset id="socialLoginList">
+        <legend>Inicie sesión con otro servicio</legend>
+        <p>
+            @foreach (var client in OAuthWebSecurity.RegisteredClientData) {
+                <button type="submit" name="provider" value="@client.AuthenticationClient.ProviderName"
+                        title="Inicie sesión usando su cuenta de @client.DisplayName">@client.DisplayName</button>
+            }
+        </p>
+    </fieldset>
+    </form>
+}

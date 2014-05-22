@@ -1,0 +1,10 @@
+﻿<Window x:Class="WpfLab053.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="470" Loaded="Window_Loaded">
+    <Grid Name="grid1">
+        <ListBox ItemsSource="{Binding}" DisplayMemberPath="Nombre" Margin="44,37,234,99" Name="ListBox1"> </ListBox>
+        <Label Content="{Binding Path=Nombre}" Height="28" HorizontalAlignment="Left" Margin="263,87,0,0" Name="label1" VerticalAlignment="Top" Width="155" />
+        <Label Content="{Binding Path=Codigo}" Height="28" HorizontalAlignment="Left" Margin="263,45,0,0" Name="label2" VerticalAlignment="Top" Width="43" />
+    </Grid>
+</Window>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfBasico.WindowPpal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WindowPpal" Height="193" Width="300">
+    <Grid Height="153">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="71*" />
+            <RowDefinition Height="69*" />
+            <RowDefinition Height="83*" />
+        </Grid.RowDefinitions>
+        <Button Content="Codigo" Height="23" HorizontalAlignment="Left" Margin="76,12,0,0" Name="button1" VerticalAlignment="Top" Width="119" Click="button1_Click" />
+        <Button Content="XAML" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="76,15,0,0" Name="button2" VerticalAlignment="Top" Width="119" Click="button2_Click" />
+        <Button Content="XAML y Codigo" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="76,13,0,0" Name="button3" VerticalAlignment="Top" Width="119" Click="button3_Click" />
+    </Grid>
+</Window>

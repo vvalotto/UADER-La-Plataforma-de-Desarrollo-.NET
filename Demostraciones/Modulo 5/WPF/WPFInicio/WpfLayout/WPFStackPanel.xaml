@@ -1,0 +1,12 @@
+﻿<Window x:Class="APSoftWPF.WPFStackPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPFStackPanel" Height="250" Width="192">
+    <StackPanel Height="188" Name="stackPanel1" Width="163" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <CheckBox Content="CheckBox 1" Height="16" Name="checkBox1" Width="100" />
+        <CheckBox Content="CheckBox 2" Height="16" Name="checkBox2" Width="100" />
+        <CheckBox Content="CheckBox 3" Height="16" Name="checkBox3" Width="100" />
+        <Image Height="56" Name="image1" Stretch="Fill" Width="61" Source="/APSoftWPF;component/Images/Earth.bmp" />
+        <Image Height="56" Name="image2" Stretch="Fill" Width="63" Source="/APSoftWPF;component/Images/Penguin.bmp" />
+    </StackPanel>
+</Window>

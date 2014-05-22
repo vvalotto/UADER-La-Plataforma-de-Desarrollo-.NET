@@ -1,0 +1,25 @@
+﻿@{
+    // Establecer la página de diseño y el título de página
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Gracias por registrarse";
+}
+
+@if (!WebSecurity.IsAuthenticated) {
+    <hgroup class="title">
+        <h1>@Page.Title.</h1>
+        <h2>Aún no ha terminado.</h2>
+    </hgroup>
+
+    <p>
+       Se le ha enviado un correo electrónico con instrucciones sobre cómo activar la cuenta.
+    </p>
+} else {
+    <hgroup class="title">
+        <h1>@Page.Title.</h1>
+        <h2>Ya está listo.</h2>
+    </hgroup>
+
+    <p>
+        Parece ser que ya ha confirmado la cuenta y está listo para comenzar.
+    </p>
+}

@@ -1,0 +1,104 @@
+﻿@* Quitar esta sección si se utilizan agrupaciones *@
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Iniciar sesión";
+
+    // Inicializar variables de página generales
+    var email = "";
+    var password = "";
+    var rememberMe = false;
+
+    var returnUrl = Request.QueryString["ReturnUrl"];
+    if (returnUrl.IsEmpty()) {
+        // Algunos proveedores de inicio de sesión externo siempre requieren un valor URL devuelto
+        returnUrl = Href("~/");
+    }
+
+    // Setup validation
+    Validation.RequireField("email", "Debe especificar una dirección de correo electrónico.");
+    Validation.RequireField("password", "Debe especificar una contraseña.");
+    Validation.Add("password",
+        Validator.StringLength(
+            maxLength: Int32.MaxValue,
+            minLength: 6,
+            errorMessage: "La contraseña debe tener al menos seis caracteres"));
+
+    // Si esta es una solicitud POST, valide y procese los datos
+    if (IsPost) {
+        AntiForgery.Validate();
+        // ¿Se trata de una solicitud de inicio de sesión externo?
+        string provider = Request.Form["provider"];
+        if (!provider.IsEmpty()) {
+            OAuthWebSecurity.RequestAuthentication(provider, Href("~/Account/RegisterService", new { returnUrl }));
+            return;
+        } else if (Validation.IsValid()) {
+            email = Request.Form["email"];
+            password = Request.Form["password"];
+            rememberMe = Request.Form["rememberMe"].AsBool();
+
+            if (WebSecurity.UserExists(email) && WebSecurity.GetPasswordFailuresSinceLastSuccess(email) > 4 && WebSecurity.GetLastPasswordFailureDate(email).AddSeconds(60) > DateTime.UtcNow) {
+                Response.Redirect("~/Account/AccountLockedOut");
+                return;
+            }
+
+            // Intentar iniciar sesión mediante las credenciales suministradas
+            if (WebSecurity.Login(email, password, rememberMe)) {
+                Context.RedirectLocal(returnUrl);
+                return;
+            } else {
+                ModelState.AddFormError("El nombre de usuario y la contraseña proporcionados son incorrectos.");
+            }
+        }
+    }
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+</hgroup>
+
+<section id="loginForm">
+    <h2>Use una cuenta local para iniciar sesión.</h2>
+    <form method="post">
+        @AntiForgery.GetHtml()
+        @* Si hay algún error de validación, mostrar un error *@
+        @Html.ValidationSummary("El inicio de sesión no se realizó correctamente. Corrija los errores e inténtelo de nuevo.", excludeFieldErrors: true, htmlAttributes: null)
+
+        <fieldset>
+            <legend>Iniciar sesión en su cuenta</legend>
+            <ol>
+                <li class="email">
+                    <label for="email" @if (!ModelState.IsValidField("email"))
+                                       {<text>class="error-label"</text>}>Dirección de correo electrónico</label>
+                    <input type="text" id="email" name="email" value="@email" @Validation.For("email")/>
+                    @* Escribir los errores de validación de nombre de usuario en la página *@
+                    @Html.ValidationMessage("email")
+                </li>
+                <li class="password">
+                    <label for="password" @if (!ModelState.IsValidField("password")) {<text>class="error-label"</text>}>Contraseña</label>
+                    <input type="password" id="password" name="password" @Validation.For("password")/>
+                    @* Escribir los errores de validación de contraseña en la página *@
+                    @Html.ValidationMessage("password")
+                </li>
+                <li class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe" value="true" checked="@rememberMe" />
+                    <label class="checkbox" for="rememberMe">¿Recordar cuenta?</label>
+                </li>
+            </ol>
+            <input type="submit" value="Iniciar sesión" />
+        </fieldset>
+    </form>
+    <p>
+        <a href="~/Account/Register">¿No dispone de una cuenta?</a>
+        <a href="~/Account/ForgotPassword">¿Olvidó su contraseña?</a>
+    </p>
+</section>
+
+<section class="social" id="socialLoginForm">
+    <h2>Usar otro servicio para iniciar sesión.</h2>
+    @RenderPage("~/Account/_ExternalLoginsList.cshtml")
+</section>

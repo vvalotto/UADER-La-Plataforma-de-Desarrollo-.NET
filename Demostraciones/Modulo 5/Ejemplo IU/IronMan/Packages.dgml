@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="4. Dominio\IronMan.Dominio" Label="IronMan.Dominio" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+    <Node Id="3. Aplicacion\IronMan.DTO" Label="IronMan.DTO" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+    <Node Id="3. Aplicacion\IronMan.Gestores" Label="IronMan.Gestores" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+    <Node Id="3. Aplicacion\IronMan.Repositorio" Label="IronMan.Repositorio" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+    <Node Id="1. Presentacion\IronManMVC" Label="IronManMVC" Category="Proyecto" />
+    <Node Id="DotNetOpenAuth.AspNet 4.1.4.12333" Label="DotNetOpenAuth.AspNet 4.1.4.12333" Category="Paquete" />
+    <Node Id="DotNetOpenAuth.Core 4.1.4.12333" Label="DotNetOpenAuth.Core 4.1.4.12333" Category="Paquete" />
+    <Node Id="DotNetOpenAuth.OAuth.Consumer 4.1.4.12333" Label="DotNetOpenAuth.OAuth.Consumer 4.1.4.12333" Category="Paquete" />
+    <Node Id="DotNetOpenAuth.OAuth.Core 4.1.4.12333" Label="DotNetOpenAuth.OAuth.Core 4.1.4.12333" Category="Paquete" />
+    <Node Id="DotNetOpenAuth.OpenId.Core 4.1.4.12333" Label="DotNetOpenAuth.OpenId.Core 4.1.4.12333" Category="Paquete" />
+    <Node Id="DotNetOpenAuth.OpenId.RelyingParty 4.1.4.12333" Label="DotNetOpenAuth.OpenId.RelyingParty 4.1.4.12333" Category="Paquete" />
+    <Node Id="EntityFramework 5.0.0" Label="EntityFramework 5.0.0" Category="Paquete" />
+    <Node Id="EntityFramework.es 5.0.0" Label="EntityFramework.es 5.0.0" Category="Paquete" />
+    <Node Id="jQuery 1.8.2" Label="jQuery 1.8.2" Category="Paquete" />
+    <Node Id="jQuery.UI.Combined 1.8.24" Label="jQuery.UI.Combined 1.8.24" Category="Paquete" />
+    <Node Id="jQuery.Validation 1.10.0" Label="jQuery.Validation 1.10.0" Category="Paquete" />
+    <Node Id="knockoutjs 2.2.0" Label="knockoutjs 2.2.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Mvc 4.0.20710.0" Label="Microsoft.AspNet.Mvc 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Mvc.es 4.0.20710.0" Label="Microsoft.AspNet.Mvc.es 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Mvc.FixedDisplayModes 1.0.0" Label="Microsoft.AspNet.Mvc.FixedDisplayModes 1.0.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Razor 2.0.20715.0" Label="Microsoft.AspNet.Razor 2.0.20715.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Razor.es 2.0.20715.0" Label="Microsoft.AspNet.Razor.es 2.0.20715.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Web.Optimization 1.0.0" Label="Microsoft.AspNet.Web.Optimization 1.0.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.Web.Optimization.es 1.0.0" Label="Microsoft.AspNet.Web.Optimization.es 1.0.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi 4.0.20710.0" Label="Microsoft.AspNet.WebApi 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Label="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.Client.es 4.0.20710.0" Label="Microsoft.AspNet.WebApi.Client.es 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 4.0.20710.0" Label="Microsoft.AspNet.WebApi.Core 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.Core.es 4.0.20710.0" Label="Microsoft.AspNet.WebApi.Core.es 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.OData 4.0.0" Label="Microsoft.AspNet.WebApi.OData 4.0.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.OData.es 4.0.0" Label="Microsoft.AspNet.WebApi.OData.es 4.0.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 4.0.20710.0" Label="Microsoft.AspNet.WebApi.WebHost 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost.es 4.0.20710.0" Label="Microsoft.AspNet.WebApi.WebHost.es 4.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages 2.0.20710.0" Label="Microsoft.AspNet.WebPages 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.Data 2.0.20710.0" Label="Microsoft.AspNet.WebPages.Data 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.Data.es 2.0.20710.0" Label="Microsoft.AspNet.WebPages.Data.es 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.es 2.0.20710.0" Label="Microsoft.AspNet.WebPages.es 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.OAuth 2.0.20710.0" Label="Microsoft.AspNet.WebPages.OAuth 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.OAuth.es 2.0.20710.0" Label="Microsoft.AspNet.WebPages.OAuth.es 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.WebData 2.0.20710.0" Label="Microsoft.AspNet.WebPages.WebData 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.AspNet.WebPages.WebData.es 2.0.20710.0" Label="Microsoft.AspNet.WebPages.WebData.es 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.Data.Edm 5.2.0" Label="Microsoft.Data.Edm 5.2.0" Category="Paquete" />
+    <Node Id="Microsoft.Data.OData 5.2.0" Label="Microsoft.Data.OData 5.2.0" Category="Paquete" />
+    <Node Id="Microsoft.jQuery.Unobtrusive.Ajax 2.0.30116.0" Label="Microsoft.jQuery.Unobtrusive.Ajax 2.0.30116.0" Category="Paquete" />
+    <Node Id="Microsoft.jQuery.Unobtrusive.Validation 2.0.30116.0" Label="Microsoft.jQuery.Unobtrusive.Validation 2.0.30116.0" Category="Paquete" />
+    <Node Id="Microsoft.Net.Http 2.0.20710.0" Label="Microsoft.Net.Http 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.Net.Http.es 2.0.20710.0" Label="Microsoft.Net.Http.es 2.0.20710.0" Category="Paquete" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Paquete" />
+    <Node Id="Modernizr 2.6.2" Label="Modernizr 2.6.2" Category="Paquete" />
+    <Node Id="Newtonsoft.Json 4.5.11" Label="Newtonsoft.Json 4.5.11" Category="Paquete" />
+    <Node Id="System.Spatial 5.2.0" Label="System.Spatial 5.2.0" Category="Paquete" />
+    <Node Id="WebGrease 1.3.0" Label="WebGrease 1.3.0" Category="Paquete" />
+    <Node Id="1. Presentacion\IronMan.LibreriaMVP" Label="IronMan.LibreriaMVP" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+    <Node Id="1. Presentacion\IronManWF" Label="IronManWF" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+    <Node Id="1. Presentacion\IronMan" Label="IronMan" Category="Proyecto" />
+    <Node Id="EntityFramework 6.1.0" Label="EntityFramework 6.1.0" Category="Paquete" />
+  </Nodes>
+  <Links>
+    <Link Source="4. Dominio\IronMan.Dominio" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+    <Link Source="3. Aplicacion\IronMan.DTO" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+    <Link Source="3. Aplicacion\IronMan.Gestores" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+    <Link Source="3. Aplicacion\IronMan.Repositorio" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+    <Link Source="DotNetOpenAuth.AspNet 4.1.4.12333" Target="DotNetOpenAuth.OpenId.RelyingParty 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="DotNetOpenAuth.AspNet 4.1.4.12333" Target="DotNetOpenAuth.OAuth.Consumer 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="DotNetOpenAuth.OAuth.Consumer 4.1.4.12333" Target="DotNetOpenAuth.OAuth.Core 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="DotNetOpenAuth.OAuth.Core 4.1.4.12333" Target="DotNetOpenAuth.Core 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="DotNetOpenAuth.OpenId.Core 4.1.4.12333" Target="DotNetOpenAuth.Core 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="DotNetOpenAuth.OpenId.RelyingParty 4.1.4.12333" Target="DotNetOpenAuth.OpenId.Core 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="EntityFramework.es 5.0.0" Target="EntityFramework 5.0.0" Category="Dependencia de paquete" />
+    <Link Source="jQuery.UI.Combined 1.8.24" Target="jQuery 1.8.2" Category="Dependencia de paquete" />
+    <Link Source="jQuery.Validation 1.10.0" Target="jQuery 1.8.2" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.20710.0" Target="Microsoft.AspNet.WebPages 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Mvc 4.0.20710.0" Target="Microsoft.AspNet.Razor 2.0.20715.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Mvc.es 4.0.20710.0" Target="Microsoft.AspNet.Mvc 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Mvc.FixedDisplayModes 1.0.0" Target="Microsoft.AspNet.Mvc 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Razor.es 2.0.20715.0" Target="Microsoft.AspNet.Razor 2.0.20715.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.0.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Web.Optimization 1.0.0" Target="WebGrease 1.3.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.Web.Optimization.es 1.0.0" Target="Microsoft.AspNet.Web.Optimization 1.0.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi 4.0.20710.0" Target="Microsoft.AspNet.WebApi.WebHost 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Target="Newtonsoft.Json 4.5.11" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.Client.es 4.0.20710.0" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 4.0.20710.0" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.Core.es 4.0.20710.0" Target="Microsoft.AspNet.WebApi.Core 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.OData 4.0.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.OData 4.0.0" Target="Microsoft.AspNet.WebApi.Client 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.OData 4.0.0" Target="Microsoft.AspNet.WebApi.Core 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.OData 4.0.0" Target="Microsoft.Data.OData 5.2.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.OData.es 4.0.0" Target="Microsoft.AspNet.WebApi.OData 4.0.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.20710.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 4.0.20710.0" Target="Microsoft.AspNet.WebApi.Core 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost.es 4.0.20710.0" Target="Microsoft.AspNet.WebApi.WebHost 4.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.20710.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages 2.0.20710.0" Target="Microsoft.AspNet.Razor 2.0.20715.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.Data.es 2.0.20710.0" Target="Microsoft.AspNet.WebPages.Data 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.es 2.0.20710.0" Target="Microsoft.AspNet.WebPages 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.OAuth 2.0.20710.0" Target="Microsoft.AspNet.WebPages.WebData 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.OAuth 2.0.20710.0" Target="DotNetOpenAuth.AspNet 4.1.4.12333" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.OAuth.es 2.0.20710.0" Target="Microsoft.AspNet.WebPages.OAuth 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.WebData 2.0.20710.0" Target="Microsoft.AspNet.WebPages.Data 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.AspNet.WebPages.WebData.es 2.0.20710.0" Target="Microsoft.AspNet.WebPages.WebData 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.Data.OData 5.2.0" Target="System.Spatial 5.2.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.Data.OData 5.2.0" Target="Microsoft.Data.Edm 5.2.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.jQuery.Unobtrusive.Ajax 2.0.30116.0" Target="jQuery 1.8.2" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.jQuery.Unobtrusive.Validation 2.0.30116.0" Target="jQuery.Validation 1.10.0" Category="Dependencia de paquete" />
+    <Link Source="Microsoft.Net.Http.es 2.0.20710.0" Target="Microsoft.Net.Http 2.0.20710.0" Category="Dependencia de paquete" />
+    <Link Source="1. Presentacion\IronManMVC" Target="EntityFramework.es 5.0.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="jQuery.UI.Combined 1.8.24" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="knockoutjs 2.2.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.Mvc.es 4.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.Mvc.FixedDisplayModes 1.0.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.Razor.es 2.0.20715.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.Web.Optimization.es 1.0.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebApi 4.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebApi.Client.es 4.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebApi.Core.es 4.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebApi.OData.es 4.0.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebApi.WebHost.es 4.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebPages.Data.es 2.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebPages.es 2.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebPages.OAuth.es 2.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.AspNet.WebPages.WebData.es 2.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.jQuery.Unobtrusive.Ajax 2.0.30116.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.jQuery.Unobtrusive.Validation 2.0.30116.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Microsoft.Net.Http.es 2.0.20710.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManMVC" Target="Modernizr 2.6.2" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronMan.LibreriaMVP" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronManWF" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+    <Link Source="1. Presentacion\IronMan" Target="EntityFramework 6.1.0" Category="Paquete instalado" />
+  </Links>
+  <Categories>
+    <Category Id="Proyecto" />
+    <Category Id="Paquete" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Proyecto" ValueLabel="True">
+      <Condition Expression="HasCategory('Proyecto')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Dependencia de paquete" ValueLabel="True">
+      <Condition Expression="HasCategory('Dependencia de paquete')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

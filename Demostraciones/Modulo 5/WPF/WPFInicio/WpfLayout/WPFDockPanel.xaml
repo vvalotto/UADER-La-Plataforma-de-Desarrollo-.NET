@@ -1,0 +1,12 @@
+﻿<Window x:Class="APSoftWPF.WPFDockPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPFDockPanel_" Height="300" Width="300">
+    <DockPanel Name="dockPanel1">
+        <Label Content="Abajo" Height="121" Name="label1" DockPanel.Dock="Bottom" Width="287" HorizontalContentAlignment="Center" Background="#FF26D226" />
+        <Label Content="Arriba" Height="109" Name="label2" Width="278" DockPanel.Dock="Top" HorizontalContentAlignment="Center" Background="#FF14ABED" Target="{Binding}" />
+        <Label Content="Izquierda" Height="31" Name="label3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#FFEF0F0F" Width="85" />
+        <Label Content="Derecha" Height="32" Name="label4" DockPanel.Dock="Right" Width="79" Background="#FFBCD318" HorizontalAlignment="Center" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Content="Central" Height="34" Name="label5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="117" Background="#FFBF18AB" />
+    </DockPanel>
+</Window>
