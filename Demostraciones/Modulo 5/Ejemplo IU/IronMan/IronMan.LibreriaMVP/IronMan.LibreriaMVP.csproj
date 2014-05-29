@@ -47,9 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presenters\BasePresenter.cs" />
+    <Compile Include="Presenters\EventoEditPresenter.cs" />
     <Compile Include="Presenters\EventoListPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\IEventoEditView.cs" />
     <Compile Include="Views\IEventosListView.cs" />
+    <Compile Include="Views\INavegacionServicio.cs" />
+    <Compile Include="Views\IView.cs" />
+    <Compile Include="Views\ViewPages.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IronMan.Dominio\IronMan.Dominio.csproj">

@@ -19,15 +19,12 @@ namespace IronManWF
     {
 
         private readonly EventoGestor _eGestor;
-        private readonly PruebaGestor _pGestor;
 
         public frmEventos()
         {
             this._eGestor = new EventoGestor();
-            this._pGestor = new PruebaGestor();
             InitializeComponent();
             LigarComponentes();
-
         }
 
         private void LigarComponentes()
@@ -40,10 +37,6 @@ namespace IronManWF
             this.listBoxEventos.DataSource = this._eGestor.Listar();
         }
 
-        private void lblFecha_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void OnEventoListBoxSelectedIndexChanged(object sender, EventArgs e)
         {
@@ -68,12 +61,6 @@ namespace IronManWF
 
         private void frmEventos_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void listBoxEventos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

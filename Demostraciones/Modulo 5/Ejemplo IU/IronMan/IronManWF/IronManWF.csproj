@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEditEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditEvento.Designer.cs">
+      <DependentUpon>frmEditEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEventoMVP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,13 +70,34 @@
     <Compile Include="frmEventos.Designer.cs">
       <DependentUpon>frmEventos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmIronMan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIronMan.Designer.cs">
+      <DependentUpon>frmIronMan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaEventos.Designer.cs">
+      <DependentUpon>frmListaEventos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmEditEvento.resx">
+      <DependentUpon>frmEditEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEventoMVP.resx">
       <DependentUpon>frmEventoMVP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEventos.resx">
       <DependentUpon>frmEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIronMan.resx">
+      <DependentUpon>frmIronMan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaEventos.resx">
+      <DependentUpon>frmListaEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

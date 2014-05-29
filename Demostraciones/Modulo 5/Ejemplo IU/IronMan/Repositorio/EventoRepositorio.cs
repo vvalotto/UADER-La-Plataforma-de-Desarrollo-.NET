@@ -24,16 +24,15 @@ namespace IronMan.Repositorio
                            select e;
             return _eventos; 
         }
-
+        //
         public IQueryable<Evento> GetTodosByNombre(String _nombre)
         {
            var _eventos = from e in _ctx.Set<Evento>()
                           where e.Nombre == _nombre
                           select e;
            return _eventos;
- 
         }
-
+        //
         public IQueryable<Evento> GetTodosByFecha(DateTime _fInicial, DateTime _ffinal)
         {
             var _eventos = from e in _ctx.Set<Evento>()

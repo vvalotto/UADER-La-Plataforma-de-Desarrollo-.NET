@@ -51,7 +51,6 @@
             this.listBoxEventos.Name = "listBoxEventos";
             this.listBoxEventos.Size = new System.Drawing.Size(190, 186);
             this.listBoxEventos.TabIndex = 0;
-            this.listBoxEventos.SelectedIndexChanged += new System.EventHandler(this.listBoxEventos_SelectedIndexChanged);
             // 
             // btnCerrar
             // 
@@ -122,7 +121,6 @@
             this.lblFecha.Size = new System.Drawing.Size(37, 13);
             this.lblFecha.TabIndex = 2;
             this.lblFecha.Text = "Fecha";
-            this.lblFecha.Click += new System.EventHandler(this.lblFecha_Click);
             // 
             // lblLugar
             // 

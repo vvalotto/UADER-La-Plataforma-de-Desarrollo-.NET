@@ -9,6 +9,9 @@ namespace IronMan.Dominio.Modelos
         public Evento()
         {
             this.Pruebas = new List<Prueba>();
+            this.Fecha = DateTime.Now;
+            this.Comentario = "Sin Comentarios";
+            this.EstaHabilitado = true;
         }
 
         //Identificador

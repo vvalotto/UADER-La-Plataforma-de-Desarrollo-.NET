@@ -7,7 +7,7 @@ using IronMan.DTO;
 
 namespace IronMan.LibreriaMVP.Views
 {
-    public interface IEventosListView
+    public interface IEventosListView : IView
     {
         event Action SeleccionarEvento;
         event Action Cerrar;
