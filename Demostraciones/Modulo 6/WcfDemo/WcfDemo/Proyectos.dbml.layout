@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Proyectos">
+  <DataContextMoniker Name="/ProyectosDataContext" />
+  <nestedChildShapes>
+    <classShape Id="29644bfa-d161-4c93-a87d-7048278bedfb" absoluteBounds="0.75, 1.375, 2, 3.1170068359375">
+      <DataClassMoniker Name="/ProyectosDataContext/Clientes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f87575b-5d7b-4c2c-86d7-6fb2ec35a2c4" absoluteBounds="0.765, 1.835, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e806be01-83f1-4784-8f4b-2e111c935d9a" absoluteBounds="3.625, 2.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ProyectosDataContext/Proyectos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3e3991b0-2339-42a4-b264-b4c449cc3366" absoluteBounds="3.64, 2.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.91429768880208); (3.625 : 2.91429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ProyectosDataContext/Clientes/Clientes_Proyectos" />
+      <nodes>
+        <classShapeMoniker Id="29644bfa-d161-4c93-a87d-7048278bedfb" />
+        <classShapeMoniker Id="e806be01-83f1-4784-8f4b-2e111c935d9a" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
