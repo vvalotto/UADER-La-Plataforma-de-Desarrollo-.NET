@@ -18,7 +18,6 @@ namespace IronMan.Gestores
         IronManContext _ctx;
         Prueba _prueba;
 
-        //Constructor
         public PruebaGestor()
         {
             try
@@ -34,7 +33,6 @@ namespace IronMan.Gestores
             }
         }
 
-        #region Metodos Publicos
         public void Guardar(PruebaDTO p)
         {
             try
@@ -90,14 +88,7 @@ namespace IronMan.Gestores
         {
             throw new NotImplementedException();
         }
-                
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
-        #endregion
 
-        #region Metodos Privados
         private Prueba DTOaModelo(PruebaDTO _pDTO)
         {
             var _prueba = new Prueba();
@@ -120,7 +111,10 @@ namespace IronMan.Gestores
 
             return _pDTO;
         }
-        #endregion
 
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
     }
 }

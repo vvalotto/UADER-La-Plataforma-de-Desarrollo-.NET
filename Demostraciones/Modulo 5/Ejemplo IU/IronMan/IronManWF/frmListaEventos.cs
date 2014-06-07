@@ -57,7 +57,7 @@ namespace IronManWF
 
         public void MostrarEvento(EventoDTO evento)
         {
-            //No Implementado
+            //MessageBox.Show(evento.Nombre);
         }
 
         private void OnEventoDataGridCellSelected(object sender, DataGridViewCellEventArgs e)

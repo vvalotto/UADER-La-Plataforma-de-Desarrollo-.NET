@@ -21,7 +21,7 @@ public partial class Evento : System.Web.UI.Page, IEventoEditView
     public void Page_Init()
     {
         _presenter = new EventoEditPresenter(this, new EventoGestor());
-        _presenter.eId = Convert.ToInt32(Request.QueryString["eID"]);
+        _presenter._eId = Convert.ToInt32(Request.QueryString["eID"]);
         _presenter.Inicializar();
         this.btnCancelar.Click += OnClickCancelar;
         this.btnGuardar.Click += OnClickGuardar;    
@@ -44,6 +44,7 @@ public partial class Evento : System.Web.UI.Page, IEventoEditView
         this.txtNombre.Text = _eDTOAnterior.Nombre;
         this.txtLugar.Text = _eDTOAnterior.Lugar;
         this.txtComentario.Text = _eDTOAnterior.Comentario;
+        //this.txtFecha.Text = DateTime.Now.ToString("yyyy-MM-dd");
         this.txtFecha.Text = _eDTOAnterior.Fecha.ToString("yyyy-MM-dd");
     }
 
@@ -62,7 +63,7 @@ public partial class Evento : System.Web.UI.Page, IEventoEditView
     private void LlenarEventoDTO()
     {
         EventoDTO _eDTONuevo = new EventoDTO();
-        _eDTONuevo.Id = _presenter.eId;
+        _eDTONuevo.Id = _presenter._eId;
         _eDTONuevo.Nombre = this.txtNombre.Text;
         _eDTONuevo.Lugar = this.txtLugar.Text;
         _eDTONuevo.Comentario = this.txtComentario.Text;

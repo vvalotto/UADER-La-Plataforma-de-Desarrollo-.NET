@@ -1,9 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2013 for Web
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronMan", "IronMan\IronMan.csproj", "{FE094262-0C6A-49C8-B11D-CF1094EA5CD4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C} = {89542593-F25C-4344-ADD3-5BA6D420BA0C}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Presentacion", "1. Presentacion", "{761D9140-6C79-4B22-850B-011580D205BC}"
 EndProject
@@ -26,9 +27,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManWF", "IronManWF\IronManWF.csproj", "{9090CC8D-87B2-47EB-93DC-05E5624417D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronMan.LibreriaMVP", "IronMan.LibreriaMVP\IronMan.LibreriaMVP.csproj", "{D0DE72CB-1202-455D-B825-BE552FEB444F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C} = {89542593-F25C-4344-ADD3-5BA6D420BA0C}
+	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "IronManWeb", "http://localhost:23899", "{A0C820AE-F895-4462-A8BB-BB6FA851FE60}"
 	ProjectSection(WebsiteProperties) = preProject
+		Frontpage = "false"
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{d2303b9d-bbfe-47f1-8f71-6e9e3fa8f58a}|IronMan.Gestores.dll;{4E644133-EB3D-41DF-B65F-EFF89C90FE45}|IronMan.Dominio.dll;{A56D39A2-B07B-4415-88D3-D146D654F072}|IronMan.DTO.dll;{801B4335-11EF-41A0-8575-8EF9144B39D6}|Repositorio.dll;{d0de72cb-1202-455d-b825-be552feb444f}|IronMan.LibreriaMVP.dll;"
@@ -53,6 +58,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManWPF", "IronManWPF\IronManWPF.csproj", "{2742EFC0-617E-44EC-AE0A-B30040DAECCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManMVC", "IronManMVC\IronManMVC.csproj", "{9C8AD166-10A4-4686-A99A-241719FB727A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManServicios", "IronManServicios\IronManServicios.csproj", "{89542593-F25C-4344-ADD3-5BA6D420BA0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -100,6 +107,10 @@ Global
 		{9C8AD166-10A4-4686-A99A-241719FB727A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C8AD166-10A4-4686-A99A-241719FB727A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C8AD166-10A4-4686-A99A-241719FB727A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +122,7 @@ Global
 		{A0C820AE-F895-4462-A8BB-BB6FA851FE60} = {761D9140-6C79-4B22-850B-011580D205BC}
 		{2742EFC0-617E-44EC-AE0A-B30040DAECCF} = {761D9140-6C79-4B22-850B-011580D205BC}
 		{9C8AD166-10A4-4686-A99A-241719FB727A} = {761D9140-6C79-4B22-850B-011580D205BC}
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C} = {5C54122B-712F-4487-B4CA-3A47E844B8F8}
 		{801B4335-11EF-41A0-8575-8EF9144B39D6} = {183BBD6C-FB14-45EA-AB15-C0F56F88A361}
 		{D2303B9D-BBFE-47F1-8F71-6E9E3FA8F58A} = {183BBD6C-FB14-45EA-AB15-C0F56F88A361}
 		{A56D39A2-B07B-4415-88D3-D146D654F072} = {183BBD6C-FB14-45EA-AB15-C0F56F88A361}

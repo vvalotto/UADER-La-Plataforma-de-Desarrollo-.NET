@@ -19,12 +19,19 @@ namespace IronManWF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            //Aplicacion sin MVP
-            //frmEventos _frmEventos = new frmEventos();
-            //Application.Run(_frmEventos);
 
-            //Aplicacion con MVP
+            //Application.Run(new frmEventos());
+
+            //var _frmEventoMVP = new frmEventoMVP();
+            //var _eGestor = new EventoGestor();
+            //var _eventoListPresenter = new EventoListPresenter(_frmEventoMVP, _eGestor);
+
+            //_frmEventoMVP.Cerrar += () =>
+            //    {
+            //        Application.Exit();
+            //    };
+
+            //Application.Run(_frmEventoMVP);
             frmIronMan _frmIroMan = new frmIronMan();
             Application.Run(_frmIroMan);
         }

@@ -18,7 +18,6 @@ namespace IronMan.Gestores
         IronManContext _ctx;
         Evento _evento;
 
-        //Constructor 
         public EventoGestor()
         {
             try
@@ -34,9 +33,9 @@ namespace IronMan.Gestores
             }
         }
 
-        #region Metodos Publicos
         public void Guardar(EventoDTO e)
         {
+             
             try
             {
                 if (e.Id > 0)
@@ -57,6 +56,7 @@ namespace IronMan.Gestores
                 Console.WriteLine(ex.InnerException);
                 throw;
             }
+
         }
 
         public void Habilitar(EventoDTO e)
@@ -82,7 +82,7 @@ namespace IronMan.Gestores
             {
                 _evento = _repositorio.GetPorId(e.Id);
                 Console.WriteLine(_ctx.Entry(_evento).State.ToString());
-                _evento.EstaHabilitado = false;
+                _evento.EstaHabilitado = e.EstaHabilitado;
                 _repositorio.Guardar(_evento, _evento.Id);
                 _ctx.SaveChanges();
             }
@@ -136,14 +136,6 @@ namespace IronMan.Gestores
  	        throw new NotImplementedException();
         }
 
-        public void Dispose()
-        { 
-            GC.SuppressFinalize(this); 
-        }
-        #endregion
-
-
-        #region Metodos Privados
         private Evento DTOaModelo(EventoDTO _eDTO)
         {
             Evento _evento = new Evento();
@@ -173,12 +165,16 @@ namespace IronMan.Gestores
 
         private void ActualizaEvento(Evento _eMod, Evento _evento)
         {
+           
             _evento.Nombre = _eMod.Nombre;
             _evento.Lugar = _eMod.Lugar;
             _evento.Fecha = _eMod.Fecha;
             _evento.Comentario = _eMod.Comentario;
             _evento.EstaHabilitado = _eMod.EstaHabilitado;
         }
-        #endregion
+        public void Dispose()
+        { 
+            GC.SuppressFinalize(this); 
+        }
     }
 }

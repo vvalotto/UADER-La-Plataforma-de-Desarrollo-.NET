@@ -24,7 +24,7 @@ namespace IronManWF
         public frmEditEvento(int eID)
         {   
             _presenter = new EventoEditPresenter(this, new EventoGestor());
-            _presenter.eId = eID;
+            _presenter._eId = eID;
             InitializeComponent();   
         }
         #endregion
@@ -81,7 +81,7 @@ namespace IronManWF
         private void LlenarEventoDTO()
         {
             EventoDTO _eDTONuevo = new EventoDTO();
-            _eDTONuevo.Id = _presenter.eId;
+            _eDTONuevo.Id = _presenter._eId;
             _eDTONuevo.Nombre = this.txtNombre.Text;
             _eDTONuevo.Lugar = this.txtLugar.Text;
             _eDTONuevo.Comentario = this.txtComentario.Text;

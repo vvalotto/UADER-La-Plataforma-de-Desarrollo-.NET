@@ -13,10 +13,9 @@ namespace IronMan.LibreriaMVP.Presenters
     {
         private EventoGestor _eGestor;
         private readonly IEventoEditView _view;
-
-        private EventoDTO _eDTONuevo = new EventoDTO();
-        private EventoDTO _eDTOAnterior = new EventoDTO();
-        private int _eId;
+        public EventoDTO _eDTONuevo = new EventoDTO();
+        public EventoDTO _eDTOAnterior = new EventoDTO();
+        public int _eId;
 
         public EventoEditPresenter(IEventoEditView _view, EventoGestor _eGestor):
             base(_view)
@@ -75,7 +74,6 @@ namespace IronMan.LibreriaMVP.Presenters
         }
         #endregion
 
-        #region Eventos
         public void OnClickGuardar()
         {
             _eGestor.Guardar(this._eDTONuevo);
@@ -88,8 +86,8 @@ namespace IronMan.LibreriaMVP.Presenters
 
         public void OnClickVolver()
         {
-            //No implementado
+           
         }
-        #endregion
+
     }
 }
