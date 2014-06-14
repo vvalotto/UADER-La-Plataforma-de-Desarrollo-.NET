@@ -6,10 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using IronMan.Dominio.Modelos;
-using IronMan.Dominio.AccesoDatos;
-using IronMan.DTO;
-using IronMan.Gestores;
+//using IronMan.Dominio.Modelos;
+//using IronMan.Dominio.AccesoDatos;
+//using IronMan.DTO;
+//using IronMan.Gestores;
+using IronManMVC.EventoServicio;
 
 namespace IronManMVC.Controllers
 {
@@ -17,8 +18,10 @@ namespace IronManMVC.Controllers
     {
         #region Declaración del acceso de los datos persistidos
         //El gestor corresponde al modelo en el patron MVC
-        private IronManContext db = new IronManContext();
-        private EventoGestor _eGestor = new EventoGestor();
+        //private IronManContext db = new IronManContext();
+        //private EventoGestor _eGestor = new EventoGestor();
+
+        EventoServicioClient _eventoServicio = new EventoServicioClient();
         #endregion
 
         #region Lista de Eventos - Solo GET
@@ -26,11 +29,13 @@ namespace IronManMVC.Controllers
         //Recupera la lista de Eventos
         public ActionResult Index()
         {
-            return View(_eGestor.Listar().ToList());
+            //return View(_eGestor.Listar().ToList());
+            var Lista = _eventoServicio.Listar();
+            return View(Lista);
         }
         #endregion
 
-        #region Mostrar Uun evento - Solo GET
+        #region Mostrar Un evento - Solo GET
         // GET: /Eventos/Details/5
         //Muestra los detalles del evento
         public ActionResult Details(int id)
@@ -40,7 +45,9 @@ namespace IronManMVC.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            EventoDTO evento = _eGestor.Obtener(id);
+            //EventoDTO evento = _eGestor.Obtener(id);
+            Evento evento = _eventoServicio.Obtener(id);
+
 
             if (evento == null)
             {
@@ -64,11 +71,12 @@ namespace IronManMVC.Controllers
         // Crea un evento
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Id,Nombre,Fecha,Lugar,Comentario,EstaHabilitado")] EventoDTO evento)
+        public ActionResult Create([Bind(Include="Id,Nombre,Fecha,Lugar,Comentario,EstaHabilitado")] Evento evento)
         {
             if (ModelState.IsValid)
             {
-                _eGestor.Guardar(evento);
+                //_eGestor.Guardar(evento);
+                _eventoServicio.Guardar(evento);
                 return RedirectToAction("Index");
             }
 
@@ -84,7 +92,9 @@ namespace IronManMVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            EventoDTO evento = _eGestor.Obtener(id);
+            //EventoDTO evento = _eGestor.Obtener(id);
+            Evento evento = _eventoServicio.Obtener(id);
+
             if (evento == null)
             {
                 return HttpNotFound();
@@ -98,11 +108,12 @@ namespace IronManMVC.Controllers
         // Guarda la modificaciones del Evento
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Id,Nombre,Fecha,Lugar,Comentario,EstaHabilitado")] EventoDTO evento)
+        public ActionResult Edit([Bind(Include="Id,Nombre,Fecha,Lugar,Comentario,EstaHabilitado")] Evento evento)
         {
             if (ModelState.IsValid)
             {
-                _eGestor.Guardar(evento);
+                //_eGestor.Guardar(evento);
+                _eventoServicio.Guardar(evento);
                 return RedirectToAction("Index");
             }
             return View(evento);
@@ -118,7 +129,8 @@ namespace IronManMVC.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            EventoDTO evento = _eGestor.Obtener(id); ;
+            //EventoDTO evento = _eGestor.Obtener(id);
+            Evento evento = _eventoServicio.Obtener(id);
             if (evento == null)
             {
                 return HttpNotFound();
@@ -131,19 +143,21 @@ namespace IronManMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            EventoDTO evento = _eGestor.Obtener(id);
-            _eGestor.Deshabilitar(evento);
+            //EventoDTO evento = _eGestor.Obtener(id);
+            Evento evento = _eventoServicio.Obtener(id);
+
+            //_eGestor.Deshabilitar(evento);
             return RedirectToAction("Index");
         }
         #endregion
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
+            //if (disposing)
+            //{
+            //    db.Dispose();
+            //}
+            //base.Dispose(disposing);
         }
     }
 }

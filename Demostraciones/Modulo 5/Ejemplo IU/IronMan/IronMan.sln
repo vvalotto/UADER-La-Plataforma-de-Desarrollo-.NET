@@ -58,8 +58,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManWPF", "IronManWPF\IronManWPF.csproj", "{2742EFC0-617E-44EC-AE0A-B30040DAECCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManMVC", "IronManMVC\IronManMVC.csproj", "{9C8AD166-10A4-4686-A99A-241719FB727A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{89542593-F25C-4344-ADD3-5BA6D420BA0C} = {89542593-F25C-4344-ADD3-5BA6D420BA0C}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManServicios", "IronManServicios\IronManServicios.csproj", "{89542593-F25C-4344-ADD3-5BA6D420BA0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronMan.Logging", "IronMan.Logging\IronMan.Logging.csproj", "{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +116,10 @@ Global
 		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89542593-F25C-4344-ADD3-5BA6D420BA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,5 +136,9 @@ Global
 		{D2303B9D-BBFE-47F1-8F71-6E9E3FA8F58A} = {183BBD6C-FB14-45EA-AB15-C0F56F88A361}
 		{A56D39A2-B07B-4415-88D3-D146D654F072} = {183BBD6C-FB14-45EA-AB15-C0F56F88A361}
 		{4E644133-EB3D-41DF-B65F-EFF89C90FE45} = {F8AD0FEC-1A7A-4DC1-8C60-27CA87FE25DA}
+		{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE} = {CBE8CFC9-E8E9-4FC9-A592-FBF23C84D312}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal

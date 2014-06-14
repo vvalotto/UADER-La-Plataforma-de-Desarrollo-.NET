@@ -38,6 +38,14 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -81,6 +89,10 @@
     <ProjectReference Include="..\IronMan.Gestores\IronMan.Gestores.csproj">
       <Project>{d2303b9d-bbfe-47f1-8f71-6e9e3fa8f58a}</Project>
       <Name>IronMan.Gestores</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IronMan.Logging\IronMan.Logging.csproj">
+      <Project>{15f0d606-bfb0-42d5-94e0-b7dcef86fbde}</Project>
+      <Name>IronMan.Logging</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repositorio\IronMan.Repositorio.csproj">
       <Project>{801b4335-11ef-41a0-8575-8ef9144b39d6}</Project>
