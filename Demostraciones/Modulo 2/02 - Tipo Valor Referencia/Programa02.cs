@@ -29,6 +29,7 @@ namespace Modulo_2
             Console.WriteLine(tipoRef.GetType());
             Console.WriteLine("objeto B {0}", tipoRefB);
             Console.WriteLine(tipoRefB.GetType());
+            Console.WriteLine("objeto y objeto B son iguales? {0}", (tipoRef == tipoRefB));
 
             tipoRef = "Hola";
             Console.WriteLine("objeto {0}", tipoRef);
