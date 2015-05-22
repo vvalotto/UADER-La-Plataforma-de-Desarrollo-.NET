@@ -18,7 +18,10 @@ protected void TimeLabel_Load(object sender, EventArgs e)
         <h2> Hola </h2>
 
                 La hora es:
-                <asp:Label ID="TimeLabel" runat="server" onload="TimeLabel_Load"></asp:Label>
+                <asp:Label ID="TimeLabel" runat="server"></asp:Label>
+        <br />
+        <br />
+        <asp:Button ID="Boton" runat="server" Text="Clickea!" onclick="Button_OnClick"/>
      </div>
     </form>
 </body>

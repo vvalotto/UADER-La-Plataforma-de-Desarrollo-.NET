@@ -21,7 +21,7 @@ namespace AccesoADatos
         {
             //1. Se establece la cadena de conexión con la base de datos (Capa Conectada)
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=VICTOR-HP\SQLEXPRESS;Initial Catalog=Proyectos;Integrated Security=True;Pooling=False";
+            conn.ConnectionString = @"Data Source=VICTOR-HP;Initial Catalog=Proyectos;Integrated Security=True;Pooling=False";
 
             //2. Se define el comando (tipo de acceso) a la base de datos (Capa conectada)
             SqlCommand miComando = new SqlCommand("select nombre,calle, numero, piso, departamento from clientes", conn);
@@ -43,6 +43,11 @@ namespace AccesoADatos
             //Se cierra la conexion
             miComando = null;
             conn.Close();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 

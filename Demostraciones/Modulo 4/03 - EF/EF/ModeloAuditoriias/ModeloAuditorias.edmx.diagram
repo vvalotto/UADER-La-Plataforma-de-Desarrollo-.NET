@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="937333f4a3094cac807417ce22fb5be2" Name="Diagram1" >
+        <EntityTypeShape EntityType="ModeloAuditorias.Proceso" Width="1.5" PointX="1.875" PointY="1" />
+        <EntityTypeShape EntityType="ModeloAuditorias.Actividad" Width="1.5" PointX="4.5" PointY="1" />
+        <AssociationConnector Association="ModeloAuditorias.ActividadProceso" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

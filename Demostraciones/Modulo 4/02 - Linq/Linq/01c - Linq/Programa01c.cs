@@ -38,28 +38,28 @@ namespace Modulo_4
             #endregion
 
             #region Filtrado por Cliente
-            var proyectos = from proy in _listaProyectos
-                            where proy.IDCliente == 1
-                            orderby proy.Nombre
-                            select proy;
-
-            foreach (var proy in proyectos)
-            {
-                Console.WriteLine("Nombre: {0}, Descripcion: {1}", proy.Nombre, proy.Descripcion);
-            }
-
             //var proyectos = from proy in _listaProyectos
             //                where proy.IDCliente == 1
             //                orderby proy.Nombre
-            //                select new
-            //                {
-            //                    Resumen = proy.Nombre + ", " + proy.Descripcion + "\n" + "Cliente: " + proy.IDCliente.ToString()
-            //                };
+            //                select proy;
 
             //foreach (var proy in proyectos)
             //{
-            //    Console.WriteLine(proy.Resumen);
+            //    Console.WriteLine("Nombre: {0}, Descripcion: {1}", proy.Nombre, proy.Descripcion);
             //}
+
+            var proyectos = from proy in _listaProyectos
+                            where proy.IDCliente == 1
+                            orderby proy.Nombre
+                            select new
+                            {
+                                Resumen = proy.Nombre + ", " + proy.Descripcion + "\n" + "Cliente: " + proy.IDCliente.ToString()
+                            };
+
+            foreach (var proy in proyectos)
+            {
+                Console.WriteLine(proy.Resumen);
+            }
             #endregion
 
             Console.ReadKey();

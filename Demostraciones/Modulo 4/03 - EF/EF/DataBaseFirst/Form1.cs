@@ -19,35 +19,35 @@ namespace DataBaseFirst
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //using (var ctx = new northwindEntities())
-            //{
-            //    var clientes = from c in ctx.Customers
-            //                   select c;
-                
-            //    foreach (Customers c in clientes)
-            //    {
-            //        listBox1.Items.Add(c.CompanyName);
-            //    }
-            //}
-
-            try
+            using (var ctx = new northwindEntities())
             {
-                using( var ctx = new northwindEntities())
+                var clientes = from c in ctx.Customers
+                               select c;
+
+                foreach (Customers c in clientes)
                 {
-                    var _repClientes = new Repositorio<Customers>(ctx);
-
-                    var clientes = _repClientes.GetTodos();
-
-                    foreach (Customers c in clientes)
-                    {
-                        listBox1.Items.Add(c.CompanyName);
-                    }
+                    listBox1.Items.Add(c.CompanyName);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + "\n" + ex.InnerException);
-            }
+
+            //try
+            //{
+            //    using( var ctx = new northwindEntities())
+            //    {
+            //        var _repClientes = new Repositorio<Customers>(ctx);
+
+            //        var clientes = _repClientes.GetTodos();
+
+            //        foreach (Customers c in clientes)
+            //        {
+            //            listBox1.Items.Add(c.CompanyName);
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message + "\n" + ex.InnerException);
+            //}
         }
 
         private void label1_Click(object sender, EventArgs e)

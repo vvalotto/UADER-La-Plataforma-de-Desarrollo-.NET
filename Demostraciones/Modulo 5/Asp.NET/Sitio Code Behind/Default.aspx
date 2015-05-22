@@ -15,7 +15,10 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        The time is:
+        <p>
+            <asp:Label ID="Label1" runat="server"></asp:Label>
+        </p>
+        La hora es:
         <asp:Label ID="TimeLabel" runat="server" onload="TimeLabel_Load"></asp:Label>
     </div>
     </form>

@@ -10,7 +10,7 @@ public partial class Pagina1 : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         Utils util = new Utils();
-        lbVersion.Text = util.VersionWindows();
+        lbVersion.Text = util.NombreMaquina();
     }
 
     protected void btnServerTransfer_Click(object sender, EventArgs e)

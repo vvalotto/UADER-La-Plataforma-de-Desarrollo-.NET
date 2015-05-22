@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="IronManModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Eventos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" Nullable="false" />
+          <Property Name="Lugar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Comentario" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Habilitado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Participantes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Apellido" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="Estado" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Numero" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Domicilio_Calle" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Domicilio_Numero" Type="smallint" Nullable="false" />
+          <Property Name="Domicilio_Piso" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Domicilio_Departamento" Type="smallint" Nullable="false" />
+          <Property Name="Domicilio_Cuidad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Domicilio_Provincia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Domicilio_Pais" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Prueba_Id" Type="int" Nullable="false" />
+          <Property Name="Habilitado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pruebas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Distancia" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Evento_Id" Type="int" Nullable="false" />
+          <Property Name="Habilitado" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_Participantes_dbo_Pruebas_Prueba_Id">
+          <End Role="Pruebas" Type="Self.Pruebas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Participantes" Type="Self.Participantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pruebas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Participantes">
+              <PropertyRef Name="Prueba_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Pruebas_dbo_Eventos_Evento_Id">
+          <End Role="Eventos" Type="Self.Eventos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Pruebas" Type="Self.Pruebas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eventos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pruebas">
+              <PropertyRef Name="Evento_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="IronManModelStoreContainer">
+          <EntitySet Name="Eventos" EntityType="Self.Eventos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Participantes" EntityType="Self.Participantes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pruebas" EntityType="Self.Pruebas" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Participantes_dbo_Pruebas_Prueba_Id" Association="Self.FK_dbo_Participantes_dbo_Pruebas_Prueba_Id">
+            <End Role="Pruebas" EntitySet="Pruebas" />
+            <End Role="Participantes" EntitySet="Participantes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Pruebas_dbo_Eventos_Evento_Id" Association="Self.FK_dbo_Pruebas_dbo_Eventos_Evento_Id">
+            <End Role="Eventos" EntitySet="Eventos" />
+            <End Role="Pruebas" EntitySet="Pruebas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="IronManModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Eventos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Lugar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Comentario" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Pruebas" Relationship="Self.FK_dbo_Pruebas_dbo_Eventos_Evento_Id" FromRole="Eventos" ToRole="Pruebas" />
+        </EntityType>
+        <EntityType Name="Participantes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Estado" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Numero" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Domicilio_Calle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Domicilio_Numero" Type="Int16" Nullable="false" />
+          <Property Name="Domicilio_Piso" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Domicilio_Departamento" Type="Int16" Nullable="false" />
+          <Property Name="Domicilio_Cuidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Domicilio_Provincia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Domicilio_Pais" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prueba_Id" Type="Int32" Nullable="false" />
+          <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Pruebas" Relationship="Self.FK_dbo_Participantes_dbo_Pruebas_Prueba_Id" FromRole="Participantes" ToRole="Pruebas" />
+        </EntityType>
+        <EntityType Name="Pruebas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Distancia" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Evento_Id" Type="Int32" Nullable="false" />
+          <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Eventos" Relationship="Self.FK_dbo_Pruebas_dbo_Eventos_Evento_Id" FromRole="Pruebas" ToRole="Eventos" />
+          <NavigationProperty Name="Participantes" Relationship="Self.FK_dbo_Participantes_dbo_Pruebas_Prueba_Id" FromRole="Pruebas" ToRole="Participantes" />
+        </EntityType>
+        <Association Name="FK_dbo_Pruebas_dbo_Eventos_Evento_Id">
+          <End Role="Eventos" Type="Self.Eventos" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Pruebas" Type="Self.Pruebas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eventos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Pruebas">
+              <PropertyRef Name="Evento_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Participantes_dbo_Pruebas_Prueba_Id">
+          <End Role="Pruebas" Type="Self.Pruebas" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Participantes" Type="Self.Participantes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pruebas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Participantes">
+              <PropertyRef Name="Prueba_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Eventos" EntityType="Self.Eventos" />
+          <EntitySet Name="Participantes" EntityType="Self.Participantes" />
+          <EntitySet Name="Pruebas" EntityType="Self.Pruebas" />
+          <AssociationSet Name="FK_dbo_Pruebas_dbo_Eventos_Evento_Id" Association="Self.FK_dbo_Pruebas_dbo_Eventos_Evento_Id">
+            <End Role="Eventos" EntitySet="Eventos" />
+            <End Role="Pruebas" EntitySet="Pruebas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Participantes_dbo_Pruebas_Prueba_Id" Association="Self.FK_dbo_Participantes_dbo_Pruebas_Prueba_Id">
+            <End Role="Pruebas" EntitySet="Pruebas" />
+            <End Role="Participantes" EntitySet="Participantes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="IronManModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Eventos">
+            <EntityTypeMapping TypeName="IronManModel.Eventos">
+              <MappingFragment StoreEntitySet="Eventos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Lugar" ColumnName="Lugar" />
+                <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Participantes">
+            <EntityTypeMapping TypeName="IronManModel.Participantes">
+              <MappingFragment StoreEntitySet="Participantes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Domicilio_Calle" ColumnName="Domicilio_Calle" />
+                <ScalarProperty Name="Domicilio_Numero" ColumnName="Domicilio_Numero" />
+                <ScalarProperty Name="Domicilio_Piso" ColumnName="Domicilio_Piso" />
+                <ScalarProperty Name="Domicilio_Departamento" ColumnName="Domicilio_Departamento" />
+                <ScalarProperty Name="Domicilio_Cuidad" ColumnName="Domicilio_Cuidad" />
+                <ScalarProperty Name="Domicilio_Provincia" ColumnName="Domicilio_Provincia" />
+                <ScalarProperty Name="Domicilio_Pais" ColumnName="Domicilio_Pais" />
+                <ScalarProperty Name="Prueba_Id" ColumnName="Prueba_Id" />
+                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pruebas">
+            <EntityTypeMapping TypeName="IronManModel.Pruebas">
+              <MappingFragment StoreEntitySet="Pruebas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Distancia" ColumnName="Distancia" />
+                <ScalarProperty Name="Evento_Id" ColumnName="Evento_Id" />
+                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

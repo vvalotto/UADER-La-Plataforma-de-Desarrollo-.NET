@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IronManServicios" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IronManServicios" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Evento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comentario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Lugar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Evento" nillable="true" type="tns:Evento" />
+  <xs:complexType name="ArrayOfEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Evento" nillable="true" type="tns:Evento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvento" nillable="true" type="tns:ArrayOfEvento" />
+</xs:schema>

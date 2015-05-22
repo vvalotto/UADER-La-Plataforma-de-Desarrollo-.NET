@@ -27,7 +27,7 @@ namespace AccesoADatos
 
                 //PASO 1 - Se establece la cadena de conexión con la base de datos (Capa Conectada)
                 SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = @"Data Source=VICTOR-HP\SQLEXPRESS12;Initial Catalog=Proyectos;Integrated Security=True;Pooling=False";
+                conn.ConnectionString = @"Data Source=VICTOR-HP;Initial Catalog=Proyectos;Integrated Security=True;Pooling=False";
 
                 //PASO 2 - Se define el comando (tipo de acceso) a la base de datos (Capa conectada)
                 ConsultaSQL = "select Nombre from Clientes";
@@ -63,6 +63,11 @@ namespace AccesoADatos
                 MessageBox.Show(ex.Message);
             }
         
+        }
+
+        private void textBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

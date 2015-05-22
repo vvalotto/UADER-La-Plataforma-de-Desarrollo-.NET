@@ -28,16 +28,21 @@ namespace Modulo_4
                                      proyecto = p.Titulo
                                  };
 
+            Console.WriteLine("Primer Listado: Nombre de los proyectos");
             foreach (var p in proyectos)
             {
                 Console.WriteLine(p.Titulo);
             }
-            
+
+            Console.WriteLine();
+            Console.WriteLine("Segundo Listado: Nombre de los Clientes");
             foreach (var c in Clientes)
             {
                 Console.WriteLine(c.Nombre);
             }
 
+            Console.WriteLine();
+            Console.WriteLine("Tercer Listado");
             foreach (var dp in DatosProyectos)
             {
                 Console.WriteLine(dp.cliente + " - " + dp.proyecto);

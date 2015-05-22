@@ -78,4 +78,8 @@ public partial class _Default : System.Web.UI.Page
     }
 
     #endregion
+    protected void cvNombre_ServerValidate(object source, ServerValidateEventArgs args)
+    {
+
+    }
 }

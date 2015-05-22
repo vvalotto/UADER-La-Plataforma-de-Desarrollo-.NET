@@ -15,6 +15,7 @@ namespace BAGA
         {
             try { 
             Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EscapadaContexto>());
+            
             InsertarDestino();
             InsertarViaje();
             }

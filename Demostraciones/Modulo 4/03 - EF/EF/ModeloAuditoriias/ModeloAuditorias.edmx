@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModeloAuditorias.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloAuditoriasStoreContainer">
+    <EntitySet Name="ProcesoSet" EntityType="ModeloAuditorias.Store.ProcesoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActividadSet" EntityType="ModeloAuditorias.Store.ActividadSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ActividadProceso" Association="ModeloAuditorias.Store.ActividadProceso">
+      <End Role="Actividad" EntitySet="ActividadSet" />
+      <End Role="Proceso" EntitySet="ProcesoSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ProcesoSet">
+    <Key>
+      <PropertyRef Name="IdProceso" />
+    </Key>
+    <Property Name="IdProceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Habilitado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActividadSet">
+    <Key>
+      <PropertyRef Name="IdActividad" />
+    </Key>
+    <Property Name="IdActividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Proceso_IdProceso" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ActividadProceso">
+    <End Role="Actividad" Type="ModeloAuditorias.Store.ActividadSet" Multiplicity="*" />
+    <End Role="Proceso" Type="ModeloAuditorias.Store.ProcesoSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Proceso">
+        <PropertyRef Name="IdProceso" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="Proceso_IdProceso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloAuditorias" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ModeloAuditoriasContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Procesos" EntityType="ModeloAuditorias.Proceso" />
+          <EntitySet Name="ActividadSet" EntityType="ModeloAuditorias.Actividad" />
+          <AssociationSet Name="ActividadProceso" Association="ModeloAuditorias.ActividadProceso">
+            <End Role="Actividad" EntitySet="ActividadSet" />
+            <End Role="Proceso" EntitySet="Procesos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Proceso">
+          <Key>
+            <PropertyRef Name="IdProceso" />
+          </Key>
+          <Property Name="IdProceso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <Property Name="Habilitado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Actividad" Relationship="ModeloAuditorias.ActividadProceso" FromRole="Proceso" ToRole="Actividad" />
+        </EntityType>
+        <EntityType Name="Actividad">
+          <Key>
+            <PropertyRef Name="IdActividad" />
+          </Key>
+          <Property Name="IdActividad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" />
+          <NavigationProperty Name="Proceso" Relationship="ModeloAuditorias.ActividadProceso" FromRole="Actividad" ToRole="Proceso" />
+        </EntityType>
+        <Association Name="ActividadProceso">
+          <End Type="ModeloAuditorias.Actividad" Role="Actividad" Multiplicity="*" />
+          <End Type="ModeloAuditorias.Proceso" Role="Proceso" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloAuditoriasStoreContainer" CdmEntityContainer="ModeloAuditoriasContainer">
+    <EntitySetMapping Name="Procesos">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloAuditorias.Proceso)">
+        <MappingFragment StoreEntitySet="ProcesoSet">
+          <ScalarProperty Name="IdProceso" ColumnName="IdProceso" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActividadSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloAuditorias.Actividad)">
+        <MappingFragment StoreEntitySet="ActividadSet">
+          <ScalarProperty Name="IdActividad" ColumnName="IdActividad" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ActividadProceso" TypeName="ModeloAuditorias.ActividadProceso" StoreEntitySet="ActividadSet">
+      <EndProperty Name="Proceso">
+        <ScalarProperty Name="IdProceso" ColumnName="Proceso_IdProceso" />
+      </EndProperty>
+      <EndProperty Name="Actividad">
+        <ScalarProperty Name="IdActividad" ColumnName="IdActividad" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

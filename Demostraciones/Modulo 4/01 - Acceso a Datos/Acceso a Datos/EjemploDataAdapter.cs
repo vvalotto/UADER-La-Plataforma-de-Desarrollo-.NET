@@ -24,7 +24,7 @@ namespace AccesoADatos
             //SqlConnection conn = new SqlConnection();
             using (var conn = new SqlConnection())
             {
-                conn.ConnectionString = @"Data Source=VICTOR-HP\SQLEXPRESS;Initial Catalog=Proyectos;Integrated Security=True;Pooling=False";
+                conn.ConnectionString = @"Data Source=VICTOR-HP;Initial Catalog=Proyectos;Integrated Security=True;Pooling=False";
                 //Se define el tipo de acceso a la base de datos 
                 string strSQL = "select nombre, web from clientes";
                 //Se define el objeto DataAdapter (Capa descconectada) y ejecuta el commando accediendo a la base de datos

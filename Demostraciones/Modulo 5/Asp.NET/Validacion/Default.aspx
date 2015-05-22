@@ -104,7 +104,7 @@
                                      Display="Dynamic"
                                      ForeColor="Red"
                                      ControlToValidate="tbNombre"  
-                                     ClientValidationFunction="caracteresInvalidos"/>
+                                     ClientValidationFunction="caracteresInvalidos" OnServerValidate="cvNombre_ServerValidate"/>
             </td>
         </tr>
         <tr>
