@@ -68,6 +68,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronMan.AccesoDatos", "Iron
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManMVCBasico", "IronManMVCBasico\IronManMVCBasico.csproj", "{3A7BE0BD-29BB-473F-9932-216A24FCA3C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWinForm", "MVCWinForm\MVCWinForm.csproj", "{52274543-75D2-4F1C-AB6D-588108AD054C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploMVC", "EjemploMVC\EjemploMVC.csproj", "{929B2725-1611-49BE-B6CD-B51CBD7B112A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +134,14 @@ Global
 		{3A7BE0BD-29BB-473F-9932-216A24FCA3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A7BE0BD-29BB-473F-9932-216A24FCA3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A7BE0BD-29BB-473F-9932-216A24FCA3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52274543-75D2-4F1C-AB6D-588108AD054C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52274543-75D2-4F1C-AB6D-588108AD054C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52274543-75D2-4F1C-AB6D-588108AD054C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52274543-75D2-4F1C-AB6D-588108AD054C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{929B2725-1611-49BE-B6CD-B51CBD7B112A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{929B2725-1611-49BE-B6CD-B51CBD7B112A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{929B2725-1611-49BE-B6CD-B51CBD7B112A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{929B2725-1611-49BE-B6CD-B51CBD7B112A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +161,8 @@ Global
 		{15F0D606-BFB0-42D5-94E0-B7DCEF86FBDE} = {CBE8CFC9-E8E9-4FC9-A592-FBF23C84D312}
 		{59E8CD59-3B6B-400D-BC91-31B9DD738854} = {CBE8CFC9-E8E9-4FC9-A592-FBF23C84D312}
 		{3A7BE0BD-29BB-473F-9932-216A24FCA3C3} = {761D9140-6C79-4B22-850B-011580D205BC}
+		{52274543-75D2-4F1C-AB6D-588108AD054C} = {761D9140-6C79-4B22-850B-011580D205BC}
+		{929B2725-1611-49BE-B6CD-B51CBD7B112A} = {761D9140-6C79-4B22-850B-011580D205BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IronManMVCBasico.ObserverPattern;
 
 namespace IronManMVCBasico
 {
@@ -14,6 +15,7 @@ namespace IronManMVCBasico
             _eControlador.ObtenerListaEventos();
             Console.ReadKey();
 
+            Console.ReadLine();
         }
     }
 }
