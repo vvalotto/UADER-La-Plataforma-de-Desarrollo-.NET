@@ -66,7 +66,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronMan.Logging", "IronMan.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronMan.AccesoDatos", "IronMan.AccesoDatos\IronMan.AccesoDatos.csproj", "{59E8CD59-3B6B-400D-BC91-31B9DD738854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronManMVCBasico", "IronManMVCBasico\IronManMVCBasico.csproj", "{3A7BE0BD-29BB-473F-9932-216A24FCA3C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploObserver", "IronManMVCBasico\EjemploObserver.csproj", "{3A7BE0BD-29BB-473F-9932-216A24FCA3C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCWinForm", "MVCWinForm\MVCWinForm.csproj", "{52274543-75D2-4F1C-AB6D-588108AD054C}"
 EndProject

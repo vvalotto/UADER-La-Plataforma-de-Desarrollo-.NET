@@ -10,29 +10,37 @@ namespace IronMan.LibreriaMVP.Presenters
     public abstract class BasePresenter<TVista> where TVista : class, IView
 
     {
-        private readonly TVista __vista;
+        /* Clase Abstracta para la definición del Presenter
+        Contiene una relacion con la vista a traves de la interfaz IView 
+        para poder manejar los eventos de la lista
+        */
+        private readonly TVista _vista;
 
         private readonly INavegacionServicio _navegacionServicio;
 
+        #region Constructor
         public BasePresenter(TVista vista)
         {
+            /*Constructor donde se le asocia la vista correspondiente */
             if (vista == null) throw new ArgumentNullException("Vista");
-            __vista = vista;
+            _vista = vista;
         }
 
         public BasePresenter(TVista vista, INavegacionServicio navigationService)
         {
             if (vista == null) throw new ArgumentNullException("view");
             if (navigationService == null) throw new ArgumentNullException("navigationService");
-            __vista = vista;
+            _vista = vista;
             _navegacionServicio = navigationService;
         }
+        #endregion
 
+        #region Propiedades Públicas
         public IView Vista
         {
             get
             {
-                return __vista;
+                return _vista;
             }
         }
 
@@ -43,6 +51,7 @@ namespace IronMan.LibreriaMVP.Presenters
                 return _navegacionServicio;
             }
         }
+        #endregion
 
         public abstract void Inicializar();
     }

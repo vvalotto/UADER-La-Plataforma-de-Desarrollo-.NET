@@ -38,7 +38,7 @@ namespace MVCWinForm.Vista
 
         public void ListarEventos(IList<EventoDTO> eventos)
         {
-            listBoxEventos.DataSource = eventos;
+            listBoxEventos.DataSource = eventos.Count;
         }
 
         public void MostrarEventos(EventoDTO evento)

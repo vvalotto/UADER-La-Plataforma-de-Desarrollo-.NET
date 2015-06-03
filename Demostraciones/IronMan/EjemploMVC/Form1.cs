@@ -46,9 +46,9 @@ namespace EjemploMVC
             {
                 cambiada.Invoke(this, new VistaEventArgs(int.Parse(textBox1.Text)));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Debe ser un numero valido");
+                MessageBox.Show(ex.Message);
             }
         }
 

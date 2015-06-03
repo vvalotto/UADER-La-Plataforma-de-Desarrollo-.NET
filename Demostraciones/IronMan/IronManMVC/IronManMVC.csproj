@@ -162,6 +162,7 @@
     <Compile Include="Controllers\EventosController.cs" />
     <Compile Include="Controllers\HolaMundoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PruebasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -222,6 +223,7 @@
     <Content Include="Views\Eventos\Details.cshtml" />
     <Content Include="Views\Eventos\Edit.cshtml" />
     <Content Include="Views\Eventos\Index.cshtml" />
+    <Content Include="Views\Pruebas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

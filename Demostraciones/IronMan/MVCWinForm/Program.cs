@@ -25,13 +25,10 @@ namespace MVCWinForm
             FormListaEventos vListarEventos = new FormListaEventos();
             ListaEventoObservado listaEventos = new ListaEventoObservado();
             ControladorListarEvento controlador = new ControladorListarEvento(vListarEventos, listaEventos);
+            
             listaEventos.AgregarObservador(vListarEventos);
             vListarEventos.AdjuntarControlador(controlador);
 
-            //Form2 vista2 = new Form2();
-            //IModelo modelo = new ModeloInc();
-            //IControlador controlador1 = new ControladorIncremento(vista1, modelo);
-            //IControlador controlador2 = new ControladorIncremento(vista2, modelo);
             Application.Run(vListarEventos);
             //Application.Run(vista2);
 

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<IronMan.Dominio.Modelos.Prueba>
+
+@{
+    ViewBag.Title = "Lista de Pruebas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Nuevo Prueba", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Tipo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distancia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstaHabilitado)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Distancia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Evento_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstaHabilitado)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+

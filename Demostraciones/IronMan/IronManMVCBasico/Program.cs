@@ -11,9 +11,15 @@ namespace IronManMVCBasico
     {
         static void Main(string[] args)
         {
-            ControladorEvento _eControlador = new ControladorEvento();
-            _eControlador.ObtenerListaEventos();
-            Console.ReadKey();
+            Observado tienda = new Observado();
+            Observador cliente1 = new Observador("Cliente 1");
+            Observador cliente2 = new Observador("Cliente 2");
+
+            tienda.Suscribir(cliente1);
+            tienda.Suscribir(cliente2);
+
+            tienda.AgregarProducto("Ipad");
+            tienda.AgregarProducto("IWatch");
 
             Console.ReadLine();
         }

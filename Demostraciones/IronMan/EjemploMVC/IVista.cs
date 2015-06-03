@@ -12,6 +12,7 @@ namespace EjemploMVC
     public class VistaEventArgs:EventArgs
     {
         public int valor;
+
         public VistaEventArgs(int v)
         {
             valor = v;

@@ -84,6 +84,18 @@ namespace IronMan.Gestores
             return _pDTOLista;
         }
 
+        public IList<PruebaDTO> Listar(int? Id)
+        {
+            IQueryable<Prueba> _pLista = _repositorio.GetTodosByEvento(Id);
+            IList<PruebaDTO> _pDTOLista = new List<PruebaDTO>();
+
+            foreach (Prueba p in _pLista)
+            {
+                _pDTOLista.Add(ModeloaDTO(p));
+
+            }
+            return _pDTOLista;
+        }
         public bool Validar(PruebaDTO entidad)
         {
             throw new NotImplementedException();

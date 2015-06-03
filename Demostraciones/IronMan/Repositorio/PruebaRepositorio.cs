@@ -16,7 +16,7 @@ namespace IronMan.Repositorio
         {
         }
 
-       public IQueryable<Prueba> GetTodosByEvento(int _idEvento)
+       public IQueryable<Prueba> GetTodosByEvento(int? _idEvento)
        {
            var _prueba = from e in _ctx.Set<Prueba>()
                          where e.Evento_Id == _idEvento
