@@ -50,5 +50,12 @@ namespace WindowsFormsCliente
 
             MessageBox.Show("Cliente Agregado");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var svc = new ClienteServiceClient();
+            var cliente = svc.GetCliente(Convert.ToInt32(textBox1.Text));
+            textBox2.Text = cliente.Nombre;
+        }
     }
 }

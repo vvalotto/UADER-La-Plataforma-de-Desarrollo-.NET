@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfDemo", "WcfDemo\WcfDemo.csproj", "{E264C72A-E29A-4353-BA0C-A6A0172CA538}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolaCliente", "ConsolaCliente\ConsolaCliente.csproj", "{55B432C8-8334-4332-8771-4C0C4FB16F00}"
 	ProjectSection(ProjectDependencies) = postProject
 		{E264C72A-E29A-4353-BA0C-A6A0172CA538} = {E264C72A-E29A-4353-BA0C-A6A0172CA538}
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService2", "WcfService2\WcfService2.csproj", "{61663612-897B-4C46-A8A4-4E2B58C0057D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsCliente", "WindowsFormsCliente\WindowsFormsCliente.csproj", "{AAFDC16A-56D0-4792-8433-2DF9685EB78C}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -45,16 +45,6 @@ Global
 		{55B432C8-8334-4332-8771-4C0C4FB16F00}.Release|Mixed Platforms.Build.0 = Release|x86
 		{55B432C8-8334-4332-8771-4C0C4FB16F00}.Release|x86.ActiveCfg = Release|x86
 		{55B432C8-8334-4332-8771-4C0C4FB16F00}.Release|x86.Build.0 = Release|x86
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{61663612-897B-4C46-A8A4-4E2B58C0057D}.Release|x86.ActiveCfg = Release|Any CPU
 		{AAFDC16A-56D0-4792-8433-2DF9685EB78C}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{AAFDC16A-56D0-4792-8433-2DF9685EB78C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{AAFDC16A-56D0-4792-8433-2DF9685EB78C}.Debug|Mixed Platforms.Build.0 = Debug|x86
